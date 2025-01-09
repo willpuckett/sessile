@@ -1,0 +1,75 @@
+# Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
+[keyboard]
+name = "ehrbl"
+product_name = "ehrbl"
+vendor_id = 0x4c4b
+product_id = 0x4643
+manufacturer = "Octule"
+board = "XIAO BLE"
+
+[matrix]
+# Input and output pins are mandatory
+# NFC: GPIO 0.9 and 0.10
+input_pins = ["P1_12", "P0_10", "P0_09", "P1_11"]
+output_pins = ["P0_02", "P1_15", "P0_03", "P1_14", "P0_28", "P1_13", "P0_29"]
+# WARNING: Currently row2col/col2row is set in RMK's feature gate, row2col config here is valid ONLY when you're using cloud compilation
+row2col = true
+
+[layout]
+# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
+# row2col = true
+rows = 7
+cols = 4
+layers = 3
+keymap = [
+    [
+        ["B", "F", "D", "L"], ["P", "O", "U", "Y"],
+        ["MT(C, LCtrl)", "MT(S, LAlt)", "MT(T, LGui)", "MT(R, LShift)"], ["MT(N, RShift)", "MT(A, RGui)", "MT(I, RAlt)", "MT(H, RCtrl)"],
+        ["V", "W", "G", "M"], ["K", "Comma", "Dot", "Quote"],
+        ["LT(2, Backspace)", "LT(1, Space)", "E", "Enter"]
+    ],
+    [
+        ["KpEnter", "Kp7", "Kp8", "Kp9"], ["KbVolumeDown", "KbMute", "KbVolumeUp", "__"],
+        ["Kp0", "Kp4", "Kp5", "Kp6"], ["Left", "Down", "UP", "Right"],
+        ["KpDot", "Kp1", "Kp2", "Kp3"], ["Home", "PageDown", "PageUp", "End"],
+        ["__", "__", "__", "__"]
+    ],
+    [
+        ["F12", "F7", "F8", "F9"], ["__", "__", "__", "__"],
+        ["F11", "F4", "F5", "F6"], ["__", "__", "__", "__"],
+        ["F10", "F1", "F2", "F3"], ["__", "__", "__", "__"],
+        ["__", "__", "__", "__"]
+    ],
+]
+
+[light]
+# All light pins are high-active by default, uncomment if you want it to be low-active
+capslock.pin = "P0_30"
+capslock.low_active = false
+# scrolllock.pin = "PA3"
+# scrolllock.low_active = true
+# Just ignore if no light pin is used for it
+# numslock.pin = "PA5"
+# numslock.low_active = true
+
+[storage]
+clear_storage = true
+
+[ble]
+enabled = true
+# vddh has an internal voltage divider
+battery_adc_pin = "vddh"
+# Or
+# battery_adc_pin = "P0_04"
+# adc_divider_measured = 2000
+# adc_divider_total = 2806
+charge_state.pin = "P0_14"
+charge_state.low_active = false
+charge_led.pin = "P1_06"
+charge_led.low_active = false
+
+[behavior]
+# Enable HRM 
+tap_hold = { enable_hrm = true, prior_idle_time = "100ms", hold_timeout = "200ms", post_wait_time = "15ms"}
+# # Disable HRM, you can safely ignore any fields if you don't want to change them
+# # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }

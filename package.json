@@ -1,0 +1,31 @@
+{
+  "name": "sessile",
+  "version": "0.1.0",
+  "description": "minimal finger movement",
+  "main": "index.js",
+  "pkgx": "npm",
+  "scripts": {
+    "board": "cd board; ergogen --clean . && [[ -d output/cases ]] && for i in output/cases/*.jscad; do npx @jscad/cli@1 \"$i\" -of stla; rm \"$i\"; done || true",
+    "dev": "board/build.sh",
+    "lcscpart": "easyeda2kicad --full --lcsc_id=C2889988 --output board/sessile",
+    "ergogenpart": "npx kicad-to-ergogen footprint board/sessile.pretty/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.kicad_mod --output ../sessile/board/footprints/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.js",
+    "buildrmkclean": "cd rmk && cargo clean && cargo build --release && cargo make uf2 --release",
+    "buildrmk": "cd rmk && cargo build --release && cargo make uf2 --release",
+    "erasexiao": "probe-rs erase --chip nrf52840_xxAA",
+    "flashsoftdevice": "probe-rs download --verify --binary-format hex --chip nRF52840_xxAA rmk/s140_nrf52_7.3.0_softdevice.hex",
+    "flashbootloader": "sudo openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c init -c \"reset init\" -c halt -c \"nrf5 mass_erase\" -c \"program rmk/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify\" -c reset -c exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willpuckett/sessile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willpuckett/sessile/issues"
+  },
+  "homepage": "https://github.com/willpuckett/sessile#readme",
+  "dependencies": {
+    "ergogen": "^4.1"
+  }
+}

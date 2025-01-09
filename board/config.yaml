@@ -1,0 +1,392 @@
+# 3305's go at 
+# x-5 y3.8
+# x0 y5.9
+# they extend 1.20 below board
+
+# choc footprint holes have been checked for size
+# all npth are correct
+# pth are too small for 3305s, but placing 3305s over them cuts the
+# larger hole, so they don't need to be changed
+
+meta:
+  engine: 4.1.0
+  name: sessile
+  version: 0.1
+  author: willpuckett
+  url: https://github.com/willpuckett/sessile
+
+presets:
+  # These presets provide different layout options
+  # Select a preset in the `units` section below
+  # Note: The appropriate switch footprint will still need to be set in the `pcb` section
+  choc_spaced:
+    capx: 17.5        # Key cap size horizontal
+    capy: 16.5       # Key cap size vertical
+    kx: 18.5        # Key spacing horizontal
+    ky: 17.5        # Key spacing vertical
+    pinky_splay: 9.26  # Degrees of splay between pinky and ring columns
+    ring_splay: 3.84
+    middle_splay: 15.58
+    thumb_offsetx: 0.25kx
+
+units:
+  $extends: presets.choc_spaced
+  angle: 12.7755 * 2  # Angle between halves
+
+  # Defaults/Constants
+  # ====================
+  $default_height: 0  # Points invisible by default unless height/width explicitly set
+  $default_width: 0
+  xiao_x: 17.8
+  xiao_y: 21
+  sf: 16
+
+points:
+  zones.matrix:
+    anchor.shift: [100, -100]  # Fix placement on KiCAD sheet
+    rotate: -angle + pinky_splay + ring_splay 
+    mirror:
+      ref: matrix_index_top
+      shift: [0.5sf, 0.5sf]
+      distance: 24
+    key:
+      width: capx
+      height: capy
+      spread: kx      
+      padding: ky
+      autobind: 0
+    rows:
+      bottom:
+        row_net: P2
+      home:
+        row_net: P1
+      top:
+        row_net: P0
+      bottom.mirror:
+        row_net: P8
+      home.mirror:
+        row_net: P9
+      top.mirror:
+        row_net: P10
+
+    columns.pinky:
+      key:
+        column_net: P7
+        mirror.column_net: P6
+      rows:
+        bottom:
+          bind: [0.5ky, 0, 0, 0]
+        home:
+          bind: [0.5ky, 0.5kx, 0, 0]
+        top:
+          bind: [0, 0.8kx, 0.5ky, 0]
+
+    columns.ring:
+      key:
+        spread: 22.54
+        stagger: 10.5
+        splay: -pinky_splay
+        # origin: [0, pinky_adj]
+        column_net: NFC1
+        mirror.column_net: NFC0
+      rows:
+        bottom:
+          bind: [0.5ky, 1.5kx, 0, 0.5kx]
+        home:
+          bind: [0, 0.5kx, 0, 0]
+        top:
+          bind: [0, 0.5kx, 0.5ky, 0]
+    columns.middle:
+      key:
+        spread: 18.5
+        stagger: 3.44
+        splay: -ring_splay
+        # origin: [0, ring_adj]
+        column_net: NFC0
+        mirror.column_net: NFC1
+      rows:
+        bottom:
+          bind: [0.5ky, 0.5kx, 0, 0.5kx]
+        home:
+          bind: [0, 0.5kx, 0, 0]
+        top:
+          bind: [0.05ky, 0, 0.5ky, 0]
+    columns.index:
+      key:
+        spread: 18.5
+        stagger: -6.5
+        splay: -middle_splay
+        #origin: [0, index_adj]
+        column_net: P6
+        mirror.column_net: P7
+      rows:
+        bottom:
+          bind: [0.5ky, 0.5kx, 0, 0.5kx]
+        home:
+          bind: [0.5ky, 0, 0, 0]
+        top:
+          bind: [0, 0, 0.5ky, 0.85kx]
+  zones.thumb:
+    anchor:
+      ref: matrix_index_bottom
+      shift: [15.93, -22.4]
+    mirror.$extends: points.zones.matrix.mirror
+    key.$extends: points.zones.matrix.key
+    columns:
+      tucky:
+        key:
+          bind: [0.5ky, 0.5kx, 0, 0]
+          row_net: P3
+          column_net: P7
+        key.mirror:
+          row_net: P3
+          column_net: P6
+      reachy:
+        key:
+          stagger: -4
+          splay: -22
+          spread: kx + 1
+          bind: [0.5ky, 0.1kx, 0, 0.5kx]
+          row_net: P3
+          column_net: NFC1
+        key.mirror:
+          row_net: P3
+          column_net: NFC0
+  zones.reference_top_center:
+    anchor:
+      aggregate.parts: [matrix_index_top, mirror_matrix_index_top]
+      shift: [0, -0.65ky]
+  zones.mcu:
+    anchor:
+      ref: reference_top_center
+      shift: [0, -0.5xiao_y]
+    key:
+      width: xiao_x
+      height: xiao_y
+  zones.mounting_hole:
+    anchor:
+      ref: matrix_index_home
+      shift: [-0.5kx + 4, -ky + 4]
+    mirror.$extends: points.zones.matrix.mirror
+    key:
+      width: 1
+      height: 1
+outlines:
+    _key_outline:
+      - what: rectangle
+        bound: true
+        size: sf
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+    _center:
+      - what: rectangle
+        where:
+          ref: reference_top_center
+          shift: [0, -1.5ky]
+        size: [4kx, 3ky]
+      - what: rectangle
+        bound: true
+        size: sf
+        where: /matrix_index_.*/  # Include the index keys in addition to the center polygon 
+    _panel:
+      - name: _center
+        # fillet: 0  # The index rounding where the glue meets the top center keys
+      - operation: subtract
+        what: circle
+        where:
+          aggregate.parts: [thumb_reachy, mirror_thumb_reachy]
+          shift: [0, 1sf - 40]
+        radius: 40  # Should be the same as the last number in `shift` above
+      - _key_outline
+    panel:
+      - name: _panel
+        fillet: 2
+    _switches:
+      - what: rectangle
+        size: 14
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+    _keycaps:
+      - what: rectangle
+        size: [capx, capy]
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+    _mcu:
+      - what: rectangle
+        where: mcu
+        size: [xiao_x, xiao_y]
+    _mounting_holes:
+      - what: circle
+        where: /.*mounting_hole/
+        radius: 1
+    demo_switches:
+      - panel
+      - ^_switches
+      - ^_mcu
+    #  - ^_mounting_holes
+    demo_keycaps:
+      - panel
+      - ^_keycaps
+      - ^_mcu
+    #  - ^_mounting_holes
+    switchplate:
+      - panel
+      - operation: subtract
+        name: _switches
+        fillet: 0.5
+pcbs:
+  sessile:
+    outlines:
+      main:
+        outline: panel
+    footprints:
+      switches:
+        what: choc
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+        params:
+          from: "{{colrow}}"
+          to: "{{column_net}}"
+      diode_left:
+        what: UMP1NTR
+        where: 
+          - [/middle/, -/mirror/]
+        params: 
+          pad1: "pinky_{{row}}"
+          pad2: "{{row_net}}"
+          pad3: "index_{{row}}"
+          pad4: "middle_{{row}}"
+          pad5: "ring_{{row}}"
+        adjust:
+          shift: [0, -4.7]
+          rotate: 90
+      diode_right:
+        what: UMP1NTR
+        where: 
+          - [/middle/, /mirror/]
+        params: 
+          pad1: "mirror_index_{{row}}"
+          pad2: "{{row_net}}"
+          pad3: "mirror_pinky_{{row}}"
+          pad4: "mirror_ring_{{row}}"
+          pad5: "mirror_middle_{{row}}"
+        adjust:
+          shift: [0, -4.7]
+          rotate: 90
+      diode_thumb:
+        what: UMP1NTR
+        where: 
+          - thumb_reachy
+        params: 
+          pad1: "mirror_tucky_{{row}}"
+          pad2: "{{row_net}}"
+          pad3: "tucky_{{row}}"
+          pad4: "reachy_{{row}}"
+          pad5: "mirror_reachy_{{row}}"
+        adjust:
+          shift: [0, -4.7]
+          rotate: -90
+      LIR1254:
+        what: LR44-03-J
+        where: mcu
+        adjust:
+          shift: [0, -20]
+          rotate: 180
+      pw_sw:
+        what: switch_power
+        where: mcu
+        adjust:
+          shift: [0, 8.7]
+          rotate: 90
+        params:
+          from: VBAT
+          to: RAW
+      0906_raw:
+        what: 0906
+        where: mcu
+        adjust:
+          shift: [-4.445, 0.317]
+        params:
+          from: RAW
+      0906_nfc0:
+        what: 0906
+        where: mcu
+        adjust:
+          shift: [3.81, -8.7]
+        params:
+          from: NFC0
+      0906_nfc1:
+        what: 0906
+        where: mcu
+        adjust:
+          shift: [5.715, -9.5]
+        params:
+          from: NFC1
+      3305_col:
+        what: "3305"
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+        adjust:
+          shift: [0, 5.9]
+        params: 
+          from: "{{column_net}}"
+      3305_row:
+        what: "3305"
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+        adjust:
+          shift: [5, 3.8]
+          resist: true
+        params: 
+          from: "{{colrow}}"
+      310_0:
+        what: "MF254V-11-07-0743"
+        where: mcu
+        adjust: 
+          shift: [-7.620, 0]
+          rotate: -90
+        params:
+          pad1: P0
+          pad2: P1
+          pad3: P2
+          pad4: P3
+          pad5: P4
+          pad6: P5
+          pad7: P6
+      310_1:
+        what: "MF254V-11-07-0743"
+        where: mcu
+        adjust: 
+          shift: [7.620, 0]
+          rotate: -90
+        params:
+          pad1: VCC5
+          pad2: GND
+          pad3: VCC3
+          pad4: P10
+          pad5: P9
+          pad6: P8
+          pad7: P7
+      xiao:
+        what: xiao-ble
+        where: mcu
+      #- what: mountinghole
+      #  where: mounting_hole
+
+# Use this to skip having to go through kicad for prototyping...
+# Doesn't work... Only gets main switch outline
+# cases:
+#   bottom:
+#     - name: panel
+#       operation: add
+#       extrude: 1
+#     - name: switches
+#       operation: subtract
+#       extrude: 1
+

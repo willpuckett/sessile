@@ -1,0 +1,11 @@
+target
+
+*.bin
+*.elf
+*.hex
+!*softdevice.hex
+!Seeed*.hex
+.DS_Store
+
+output
+

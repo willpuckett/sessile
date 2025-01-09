@@ -1,0 +1,13 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+linker = "flip-link"
+# TODO: use `probe-rs chip list` to get your chip name 
+runner = "probe-rs run --chip nrf52840_xxAA"
+rustflags = []
+[build]
+# TODO: Pick a correct compilation target for your microcontroller
+target = "thumbv7em-none-eabihf"
+
+
+[env]
+# TODO: set DEFMT_LOG to "error" to reduce the binary size
+DEFMT_LOG = "info"
