@@ -7,5 +7,5 @@ target
 !Seeed*.hex
 .DS_Store
 
-output
-
+outlines
+*-backups
