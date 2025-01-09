@@ -24,7 +24,6 @@ So, with only 5 keys on both hands, and no cross hand combos, we would have a to
 
 I wasn't quite ready to take on learning to type on that though, so just avoiding lateral reaches seemed like a start. 🙃
 
-*Sessile* was produced using [studyofhands](https://github.com/willpuckett/studyofhands). 
 
 ## Features
 
@@ -36,3 +35,9 @@ I wasn't quite ready to take on learning to type on that though, so just avoidin
 
 - Built with RMK. Combos soon to follow upon upstream merge.
 
+
+## Origin
+
+*Sessile* was produced using [studyofhands](https://github.com/willpuckett/studyofhands). 
+
+![study of hands](.images/sessile_study.svg)
