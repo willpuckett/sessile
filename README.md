@@ -14,7 +14,7 @@ combos_{10\,keys} = \sum_{r=1}^{10} C(10, r) = 1023
 
 ...yielding 1023 possible combinations. 
 
-More realstically, we might consider excluding cross hand combinations so that modifiers might be used. That would give us 
+More realistically, we might consider excluding cross hand combinations so that modifiers might be used. That would give us 
 
 ```math
 combos_{5\,keys} = \sum_{r=1}^{5} C(5, r) = 31
@@ -31,9 +31,13 @@ I wasn't quite ready to take on learning to type on that though, so just avoidin
 
 - Uses battery LIR1254.
 
-- The high speed pins were left available for encoders and *could* be wired in a subesquent revision.
+- The high speed pins were left available for encoders and *could* be wired in a subsequent revision.
 
 - Built with RMK. Combos soon to follow upon upstream merge.
+
+## Production Files
+
+You can find the gerbers, bom, and cpl for JLC [here](board/output/pcbs/jlcpcb/production_files/). Finished boards are available [here](https://octule.com/listing/1842172090/sessile)
 
 
 ## Origin
