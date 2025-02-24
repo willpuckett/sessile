@@ -229,7 +229,7 @@
 			(net 14 "P7")
 			(uuid "10dde9b3-b7b7-4ea5-bf29-b222311a1e3c")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -348,7 +348,7 @@
 			(net 33 "mirror_ring_home")
 			(uuid "a54f876a-8ef7-4d78-939f-6d1d9ea45258")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -525,7 +525,7 @@
 			(net 36 "mirror_middle_home")
 			(uuid "1f15aeec-e604-43e3-acbc-5c1aa4aa610c")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -721,7 +721,7 @@
 			(net 19 "NFC1")
 			(uuid "01d6ed77-c7cd-48c1-8ce7-1d034da402c6")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -732,7 +732,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -851,7 +851,7 @@
 			(net 19 "NFC1")
 			(uuid "b386a7e0-0d71-46c7-8354-55ae773cb556")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -970,7 +970,7 @@
 			(net 15 "pinky_bottom")
 			(uuid "150c4a51-5a8b-4137-a153-fe8e44f03a43")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -1089,7 +1089,7 @@
 			(net 14 "P7")
 			(uuid "a3a69bde-2f67-4b79-8c29-b1bc5de7128e")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -1285,7 +1285,7 @@
 			(net 23 "NFC0")
 			(uuid "e983dd93-652e-4a49-b177-816d87dfb938")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -1296,7 +1296,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -1473,7 +1473,7 @@
 			(net 18 "ring_bottom")
 			(uuid "b588278e-fa67-431f-8864-df8912ab3c89")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -1669,7 +1669,7 @@
 			(net 14 "P7")
 			(uuid "a82369d4-f34c-4f0e-8452-8ee0ad782c1a")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -1680,7 +1680,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -1876,7 +1876,7 @@
 			(net 19 "NFC1")
 			(uuid "10bef112-7d2f-4a20-b0b3-b34e300d7597")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -1887,7 +1887,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -2064,7 +2064,7 @@
 			(net 35 "mirror_middle_bottom")
 			(uuid "f1c27a9d-502f-43a3-93c6-b9fac366d3a8")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -2260,7 +2260,7 @@
 			(net 7 "P6")
 			(uuid "221f5da7-c670-4f7b-8874-70d2fcf78d20")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -2271,7 +2271,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -2390,7 +2390,7 @@
 			(net 19 "NFC1")
 			(uuid "878ec0c0-f148-4f63-9f97-585a0708c9d6")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -2586,7 +2586,7 @@
 			(net 19 "NFC1")
 			(uuid "97ace92e-7b91-4016-a0f0-fd19e4a654df")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -2597,7 +2597,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -2716,7 +2716,7 @@
 			(net 23 "NFC0")
 			(uuid "aab17e10-b9a7-4a13-8749-6b8859e44805")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -2912,7 +2912,7 @@
 			(net 23 "NFC0")
 			(uuid "236f3dfd-5782-4ded-9d2d-12d38891d3c2")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -2923,7 +2923,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -3119,7 +3119,7 @@
 			(net 7 "P6")
 			(uuid "cf43205a-f268-45fb-b965-5d22366d3bea")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -3130,7 +3130,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -3326,7 +3326,7 @@
 			(net 19 "NFC1")
 			(uuid "84c5ba41-f2c1-4993-bf53-488dd08a1d7e")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -3337,7 +3337,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -3514,7 +3514,7 @@
 			(net 44 "mirror_reachy_default")
 			(uuid "e41a077f-336a-4005-8ffe-ca4dc3c2edb7")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -3710,7 +3710,7 @@
 			(net 14 "P7")
 			(uuid "d14d7b01-cb57-486f-9083-2e750b9d5914")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -3721,7 +3721,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -3840,7 +3840,7 @@
 			(net 23 "NFC0")
 			(uuid "fc5f9b94-2479-4e2a-b3c1-47b6b2f66e6f")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -4036,7 +4036,7 @@
 			(net 23 "NFC0")
 			(uuid "7f7f2918-ae66-488c-9295-f63be862cebf")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -4047,7 +4047,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -4221,7 +4221,7 @@
 			(net 9 "GND")
 			(uuid "d882e383-afc9-418d-987c-efe9533cb95e")
 		)
-		(model "board/sessile.3dshapes/CONN-TH_MY-LR44-03-J.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/CONN-TH_MY-LR44-03-J.wrl"
 			(offset
 				(xyz 0 -0.44 6)
 			)
@@ -4340,7 +4340,7 @@
 			(net 17 "pinky_top")
 			(uuid "0a7e101b-5309-4663-932c-c85834d7d3e2")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -4459,7 +4459,7 @@
 			(net 7 "P6")
 			(uuid "5f508650-cf2b-4f61-9d31-2953c321ec74")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -4578,7 +4578,7 @@
 			(net 39 "mirror_index_home")
 			(uuid "96a48b92-55e1-4926-956b-647d3a373929")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -4755,7 +4755,7 @@
 			(net 37 "mirror_middle_top")
 			(uuid "b6e30625-ed1e-49c9-9c5f-e3fc9b6e7058")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -4874,7 +4874,7 @@
 			(net 46 "RAW")
 			(uuid "b2554eee-92a7-42a3-bfa4-bd10f0dee1eb")
 		)
-		(model "board/sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
 			(offset
 				(xyz 0 0 -1.76)
 			)
@@ -5070,7 +5070,7 @@
 			(net 14 "P7")
 			(uuid "12ef1108-8d2e-40e6-95d3-c43cb8aab038")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -5081,7 +5081,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -5200,7 +5200,7 @@
 			(net 44 "mirror_reachy_default")
 			(uuid "221db71f-377c-499a-9c51-cef836fda8db")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -5319,7 +5319,7 @@
 			(net 19 "NFC1")
 			(uuid "726338e7-cf88-4b2c-ba40-146740f91c3c")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -5438,7 +5438,7 @@
 			(net 14 "P7")
 			(uuid "8f8761dc-352c-46cf-b148-ec9333facc12")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -5751,7 +5751,7 @@
 			(net 46 "RAW")
 			(uuid "79509df8-dd6d-474b-bcaa-263daec27871")
 		)
-		(model "board/sessile.3dshapes/XIAO-nRF52840 v15.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/XIAO-nRF52840 v15.step"
 			(offset
 				(xyz 6.1 -1.7 5)
 			)
@@ -5870,7 +5870,7 @@
 			(net 31 "mirror_pinky_top")
 			(uuid "d4672021-0513-4194-95b7-aea91c00708f")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -5989,7 +5989,7 @@
 			(net 36 "mirror_middle_home")
 			(uuid "3cdb09d1-6ba1-4f75-9845-d14c3093b65f")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6108,7 +6108,7 @@
 			(net 26 "index_bottom")
 			(uuid "ac84f71a-7260-4a76-9d52-532b409f289b")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6227,7 +6227,7 @@
 			(net 18 "ring_bottom")
 			(uuid "cba0e4af-f6ce-4cac-9793-c9adb971918e")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6423,7 +6423,7 @@
 			(net 7 "P6")
 			(uuid "86378929-e81b-427f-9e5c-ce33d801cb4f")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -6434,7 +6434,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -6553,7 +6553,7 @@
 			(net 22 "middle_bottom")
 			(uuid "7371bef3-b3bc-46b1-ad2a-ddd9ee01eede")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6672,7 +6672,7 @@
 			(net 25 "middle_top")
 			(uuid "e52d3e1a-2f98-4e85-8012-1d25d5f2d0c8")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6791,7 +6791,7 @@
 			(net 40 "mirror_index_top")
 			(uuid "5630ed85-3b2e-4056-b61a-c0d91b07b5bb")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -6910,7 +6910,7 @@
 			(net 7 "P6")
 			(uuid "95a0d63f-e9fa-4037-84ae-678ec07bf287")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -7087,7 +7087,7 @@
 			(net 21 "ring_top")
 			(uuid "56981cf2-820d-4752-b361-8751dd380631")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -7206,7 +7206,7 @@
 			(net 27 "index_home")
 			(uuid "11307c57-bd46-40cc-9df0-1978df6958ee")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -7402,7 +7402,7 @@
 			(net 7 "P6")
 			(uuid "8e3386ec-c3f8-4f3a-85df-7b475bd885c9")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -7413,7 +7413,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -7532,7 +7532,7 @@
 			(net 30 "mirror_pinky_home")
 			(uuid "2c79ecfc-fcfb-44ff-bdbc-caf2e452fdaa")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -7651,7 +7651,7 @@
 			(net 7 "P6")
 			(uuid "a1f0f032-abcf-46d9-a460-ae54e8dd048a")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -7770,7 +7770,7 @@
 			(net 7 "P6")
 			(uuid "1d12ae63-d62c-41dc-a541-d890b886afdf")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -7889,7 +7889,7 @@
 			(net 32 "mirror_ring_bottom")
 			(uuid "ec810344-bde2-4965-8a33-1517faaf0795")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -8008,7 +8008,7 @@
 			(net 43 "mirror_tucky_default")
 			(uuid "45d87564-026a-4af7-8dcd-f35b2e46382a")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -8204,7 +8204,7 @@
 			(net 7 "P6")
 			(uuid "67a131ef-84a8-4c43-9b35-c4ab55b745f5")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -8215,7 +8215,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -8411,7 +8411,7 @@
 			(net 23 "NFC0")
 			(uuid "06ece149-028d-4b17-b32f-fbab593c6a37")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -8422,7 +8422,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -8541,7 +8541,7 @@
 			(net 29 "mirror_pinky_bottom")
 			(uuid "8f846da3-2952-4f20-a669-5d1a4ea2e151")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -8660,7 +8660,7 @@
 			(net 41 "tucky_default")
 			(uuid "d5000982-62e6-4a50-a3e5-fcbb8581b8c7")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -9036,7 +9036,7 @@
 			(net 46 "RAW")
 			(uuid "315d395e-1b33-4714-b8b9-2cebca46c773")
 		)
-		(model "board/sessile.3dshapes/PCM12SMTR.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/PCM12SMTR.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -9166,7 +9166,7 @@
 			(net 23 "NFC0")
 			(uuid "d0d29000-ccc9-44dd-afc6-3dc94f572cab")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -9285,7 +9285,7 @@
 			(net 19 "NFC1")
 			(uuid "08a5d01d-1d92-4786-86c1-e5bb0ef7e1bc")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -9481,7 +9481,7 @@
 			(net 14 "P7")
 			(uuid "47ddbe83-8663-4bf1-a356-8d91ad6b9acd")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -9492,7 +9492,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -9611,7 +9611,7 @@
 			(net 7 "P6")
 			(uuid "8f154a33-e4d6-4701-a618-eaef71559ec1")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -9807,7 +9807,7 @@
 			(net 23 "NFC0")
 			(uuid "1c3676a9-ee52-4066-8893-27b726c4a548")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -9818,7 +9818,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -9937,7 +9937,7 @@
 			(net 23 "NFC0")
 			(uuid "a3ca7a1f-eaa2-4147-a6a2-0399269a8192")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -10133,7 +10133,7 @@
 			(net 7 "P6")
 			(uuid "db0dc4d3-7006-44de-8c32-8357094ae328")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -10144,7 +10144,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -10263,7 +10263,7 @@
 			(net 21 "ring_top")
 			(uuid "937c05db-2e99-4155-be55-7ee14bd48df6")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -10382,7 +10382,7 @@
 			(net 19 "NFC1")
 			(uuid "4f333a92-ba5a-4f9d-a41c-12f31eba2fa9")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -10501,7 +10501,7 @@
 			(net 35 "mirror_middle_bottom")
 			(uuid "9a6774d5-1155-45b0-be05-cf0374df4c20")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -10620,7 +10620,7 @@
 			(net 19 "NFC1")
 			(uuid "863ad387-7d7f-4e25-96e0-23a76c31e143")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -10739,7 +10739,7 @@
 			(net 42 "reachy_default")
 			(uuid "3b144e8c-61e3-46da-b96f-2ad52e966e8a")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -48691,7 +48691,7 @@
 			(net 14 "P7")
 			(uuid "7fcea8b3-1115-4e16-8a41-c5e5cc08457c")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -48887,7 +48887,7 @@
 			(net 23 "NFC0")
 			(uuid "eb3ef715-2d09-4aea-9342-71700720d3b3")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -48898,7 +48898,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -49017,7 +49017,7 @@
 			(net 7 "P6")
 			(uuid "5716ca91-e62f-43e7-b0d3-bbc5e9c9d4ab")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -49136,7 +49136,7 @@
 			(net 19 "NFC1")
 			(uuid "bbd01755-2b89-475a-885d-0824ad5a9036")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -49255,7 +49255,7 @@
 			(net 7 "P6")
 			(uuid "5a89e2fb-c94c-47b2-aa37-c6c05cdf36ea")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -49451,7 +49451,7 @@
 			(net 19 "NFC1")
 			(uuid "0a780376-6ca4-4167-9e68-86785bead85c")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -49462,7 +49462,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -49658,7 +49658,7 @@
 			(net 19 "NFC1")
 			(uuid "698bda2c-25e2-4561-9fc5-c1b34919e59a")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -49669,7 +49669,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -49788,7 +49788,7 @@
 			(net 14 "P7")
 			(uuid "ce4b0cd9-e988-4279-b2d6-2fc4e33d2d2f")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -49907,7 +49907,7 @@
 			(net 16 "pinky_home")
 			(uuid "8e11baff-54ee-4042-bfab-c0e906f5ceb2")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50026,7 +50026,7 @@
 			(net 20 "ring_home")
 			(uuid "047d1dbf-de76-4bb7-bd43-6d76276941d7")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50145,7 +50145,7 @@
 			(net 24 "middle_home")
 			(uuid "941d7714-236b-4cc4-8f9f-1f108b64708c")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50264,7 +50264,7 @@
 			(net 23 "NFC0")
 			(uuid "16023a6f-85bc-4c46-b6c4-6c48c6a6aaa9")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50383,7 +50383,7 @@
 			(net 38 "mirror_index_bottom")
 			(uuid "3745a509-dee1-43a1-a3c5-c1596bcb757d")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50579,7 +50579,7 @@
 			(net 14 "P7")
 			(uuid "2fe8ca8b-1ee8-4650-8275-a9d1f08b86e2")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -50590,7 +50590,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -50709,7 +50709,7 @@
 			(net 37 "mirror_middle_top")
 			(uuid "b5ea8871-a0fc-4a55-870f-4c45d90c8b8a")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -50905,7 +50905,7 @@
 			(net 7 "P6")
 			(uuid "5fd525ec-a557-4b16-99b9-74e76f4520ce")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -50916,7 +50916,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -51186,7 +51186,7 @@
 			(net 14 "P7")
 			(uuid "d96d0dad-6bdd-4503-a29f-7bfe7702dd48")
 		)
-		(model "board/sessile.3dshapes/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.wrl"
 			(offset
 				(xyz 0 -0 0)
 			)
@@ -51305,7 +51305,7 @@
 			(net 23 "NFC0")
 			(uuid "3192e791-5874-449a-8436-d451521fb8a6")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -51424,7 +51424,7 @@
 			(net 14 "P7")
 			(uuid "a73a8e63-2c00-4d3f-a36d-f7467749e732")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -51620,7 +51620,7 @@
 			(net 19 "NFC1")
 			(uuid "28a9648c-49db-4d38-b70d-3e21acc4cd2b")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -51631,7 +51631,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -51750,7 +51750,7 @@
 			(net 19 "NFC1")
 			(uuid "22cc1d95-40db-466e-9cdc-6161fda63a4e")
 		)
-		(model "board/sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
 			(offset
 				(xyz 0 0 -1.76)
 			)
@@ -51869,7 +51869,7 @@
 			(net 34 "mirror_ring_top")
 			(uuid "5308919b-1569-4925-9da1-77fe5cb35d73")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -52046,7 +52046,7 @@
 			(net 20 "ring_home")
 			(uuid "4d9641ff-1394-43fc-b8bf-f8875630a157")
 		)
-		(model "board/sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/SOT-353-5P_L2.0-W1.3-H1.1-LS2.0-P0.65.wrl"
 			(offset
 				(xyz 0 -0 -0)
 			)
@@ -52316,7 +52316,7 @@
 			(net 7 "P6")
 			(uuid "fef06ab2-3a38-4684-b14e-34402c8b5182")
 		)
-		(model "board/sessile.3dshapes/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.wrl"
 			(offset
 				(xyz 0 -0 0)
 			)
@@ -52435,7 +52435,7 @@
 			(net 14 "P7")
 			(uuid "31a96dc4-1600-40b6-a92e-e9c1a537589f")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -52631,7 +52631,7 @@
 			(net 14 "P7")
 			(uuid "9404de96-3a3d-4db9-a7be-9b3605b6f201")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -52642,7 +52642,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -52838,7 +52838,7 @@
 			(net 23 "NFC0")
 			(uuid "8b8b4391-06d8-42fb-9ec5-9eaf13c6450b")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -52849,7 +52849,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)
@@ -52968,7 +52968,7 @@
 			(net 28 "index_top")
 			(uuid "9c5ef9a9-246f-4038-9f0c-8e551774e4d6")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -53087,7 +53087,7 @@
 			(net 23 "NFC0")
 			(uuid "3039edc6-411c-43fa-8068-d135a3fa65ef")
 		)
-		(model "board/sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-3305-0-15-01-47-XX-10-0.step"
 			(offset
 				(xyz 0 0 0.25)
 			)
@@ -53206,7 +53206,7 @@
 			(net 23 "NFC0")
 			(uuid "96f8ca28-b4ca-4087-9d28-dae4f1429954")
 		)
-		(model "board/sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/mill-max-0906-4-15-20-75-14-11-0.step"
 			(offset
 				(xyz 0 0 -1.76)
 			)
@@ -53402,7 +53402,7 @@
 			(net 14 "P7")
 			(uuid "af68412f-91ef-494c-b6b0-47923f833afb")
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/pg1350.step"
 			(offset
 				(xyz 0 0 2.1)
 			)
@@ -53413,7 +53413,7 @@
 				(xyz 0 0 180)
 			)
 		)
-		(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+		(model "${KIPRJMOD}/../../sessile.3dshapes/KLP_Lame_Saddle.wrl"
 			(offset
 				(xyz 0 0 4.7)
 			)

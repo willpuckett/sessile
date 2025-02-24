@@ -1,0 +1,24 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
+    - name: ssbb
+      url-base: https://github.com/ssbb
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: main
+    - name: zmk-antecedent-morph
+      remote: ssbb
+      revision: v1
+  self:
+    path: zmk-config

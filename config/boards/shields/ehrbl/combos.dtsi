@@ -1,0 +1,72 @@
+#define RPI_SHORT 50
+#define RPI 175
+#define RPI_LONG 280
+
+ZMK_COMBO(num_word, &num_word NUM, LM4 LM1, 0, 50, RPI_LONG)
+ZMK_COMBO(caps_lock, &kp CAPS, LM1 RM1, 0, 50, RPI)
+ZMK_COMBO(caps_word, &caps_word, RM1 RM4, 0, 50, RPI_LONG)
+
+// Triples (Up Side Down & ESC)
+ZMK_COMBO(esc_l, &kp ESC, LT3 LT2 LT1, 0 NUM USD, 25, RPI_SHORT)
+ZMK_COMBO(esc_r, &kp ESC, RT3 RT2 RT1, 0 NUM USD, 25, RPI_SHORT)
+ZMK_COMBO(usd_l, &usd, LM1 LM2 LM3, 0, 50, RPI)
+ZMK_COMBO(usd_r, &usd, RM1 RM2 RM3, 0, 50, RPI)
+ZMK_COMBO(usd_l_release, &tog USD, LM1 LM2 LM3, USD, 50, RPI)
+ZMK_COMBO(usd_r_release, &tog USD, RM1 RM2 RM3, USD, 50, RPI)
+ZMK_COMBO(usd_lt, &tog USD, LB1 LB2 LB3, 0 USD, 50)
+ZMK_COMBO(usd_rt, &tog USD, RB1 RB2 RB3, 0 USD, 50)
+
+// Sticky Shifts
+// ZMK_COMBO(lshift, &sk LSHIFT, LB1 LB2, 0, 50)
+// ZMK_COMBO(rshift, &sk RSHIFT, RB1 RB2, 0, 50)
+
+// Things...
+ZMK_COMBO(grave, &mt TILDE GRAVE, LT4 LT3, 0, 25, RPI)
+ZMK_COMBO(tab, &kp TAB, LM4 LM3, 0 NUM, 25, RPI)
+ZMK_COMBO(minus, &mt UNDER MINUS, LB1 LB2, 0 NUM, 50)
+ZMK_COMBO(slash, &mt QMARK SLASH, RB1 RB2, 0 NUM, 50)
+ZMK_COMBO(semi, &mt COLON SEMI, RM3 RM4, 0 NUM, 25, RPI)
+ZMK_COMBO(equl, &mt PLUS EQUAL, LT1 LT2, 0 NUM, 25, RPI)
+ZMK_COMBO(bslh, &mt PIPE BSLH, RT1 RT2, 0, 25, RPI)
+ZMK_COMBO(lbkt, &mt LBRC LBKT, RT2 RT3, 0, 25, RPI_LONG)
+ZMK_COMBO(rbkt, &mt RBRC RBKT, RB2 RB3, 0, 25, RPI)
+
+// Letters
+ZMK_COMBO(q, &kp Q, LB3 LB4, 0, 50)
+ZMK_COMBO(j, &kp J, LB2 LB3, 0, 50)
+ZMK_COMBO(x, &kp X, LT2 LT3, 0, 50)
+ZMK_COMBO(z, &kp Z, LB1 LB4, 0, 50)
+
+// Numbers
+ZMK_COMBO(1, &mt N1 EXCL, LM4 LT4, 0, 50, RPI_SHORT)
+ZMK_COMBO(2, &mt N2 AT, LM3 LT3, 0, 50, RPI_SHORT)
+ZMK_COMBO(3, &mt N3 HASH, LM2 LT2, 0, 50, RPI_SHORT)
+ZMK_COMBO(4, &mt N4 DOLLAR, LM1 LT1, 0, 50, RPI_SHORT)
+ZMK_COMBO(5, &mt N5 PERCENT, LH1 LH2, 0, 50, RPI_SHORT)
+ZMK_COMBO(6, &mt N6 CARET, RH1 RH2, 0, 50, RPI_SHORT)
+ZMK_COMBO(7, &mt N7 AMPS, RM1 RT1, 0, 50, RPI_SHORT)
+ZMK_COMBO(8, &mt N8 STAR, RM2 RT2, 0, 50, RPI_SHORT)
+ZMK_COMBO(9, &mt N9 LPAR, RM3 RT3, 0, 50, RPI_SHORT)
+ZMK_COMBO(0, &mt N0 RPAR, RM4 RT4, 0, 50, RPI_SHORT) 
+ZMK_COMBO(kp_pm, &rpi KP_MINUS KP_PLUS, LM4 LB4, NUM, 50, RPI)
+ZMK_COMBO(kp_md, &rpi KP_DIVIDE KP_MULTIPLY, LM4 LT4, NUM, 50, RPI)
+
+// Clipboard
+ZMK_COMBO(undo, &kp LG(Z), LB4 LM4, 0, 50, RPI)
+ZMK_COMBO(cut, &kp LG(X), LM3 LB3, 0, 50, RPI)
+ZMK_COMBO(copy, &kp LG(C), LB2 LM2, 0, 50, RPI) 
+ZMK_COMBO(paste, &kp LG(V), LB1 LM1, 0, 50, RPI)
+
+// Navigation
+ZMK_COMBO(left, &mt HOME LEFT, RB1 RM1, 0 NUM, 50, RPI_SHORT)
+ZMK_COMBO(down, &mt PG_DN DOWN, RB2 RM2, 0 NUM, 50, RPI_SHORT)
+ZMK_COMBO(up, &mt PG_UP UP, RB3 RM3, 0 NUM, 50, RPI_SHORT) 
+ZMK_COMBO(right, &mt END RIGHT, RM4 RB4, 0 NUM, 50, RPI_SHORT)
+
+// Bluetooth
+ZMK_COMBO(bl_clear, &bt BT_CLR, RB1 RM1, FUN, 50, RPI)
+ZMK_COMBO(bl_next, &studio_unlock, RB2 RM2, FUN, 50, RPI)
+ZMK_COMBO(out_tog, &out OUT_TOG, RB3 RM3, FUN, 50, RPI)
+
+// Bootloader always works on central since that's where combos are invoked
+ZMK_COMBO(bootloader, &bootloader, RM4 RB4, FUN, 50, RPI)

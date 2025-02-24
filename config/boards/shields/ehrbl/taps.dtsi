@@ -1,0 +1,120 @@
+#define HM_TAPPING_TERM 280
+#define HM_TAPPING_TERM_FAST 200
+#define HM_RPI 150
+#define HM_RPI_FAST 50
+
+#define KEYS_L LT3 LT2 LT1 LM4 LM3 LM2 LM1 LB4 LB3 LB2 LB1 // left-hand keys
+#define KEYS_R RT1 RT2 RT3 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4 // right-hand keys
+#define THUMBS LH2 LH1 RH1 RH2 // thumb keys
+/ {
+	behaviors {
+		
+		hs: home_row_sticky {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <HM_TAPPING_TERM>;
+			require-prior-idle-ms = <HM_RPI>;
+			hold-trigger-on-release;
+			bindings = <&sk>, <&kp>;
+		};
+
+		hl: home_row_mod_left {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <HM_TAPPING_TERM>;
+			require-prior-idle-ms = <HM_RPI>;
+			hold-trigger-key-positions = < KEYS_R THUMBS >;
+			hold-trigger-on-release;
+			bindings = <&kp>, <&kp>;
+		};
+		
+		hr: home_row_mod_right {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <HM_TAPPING_TERM>;
+			require-prior-idle-ms = <HM_RPI>;
+			hold-trigger-key-positions = < KEYS_L THUMBS >;
+			hold-trigger-on-release;
+			bindings = <&kp>, <&kp>;
+		};
+		
+		hls: home_row_mod_left_shift {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+			require-prior-idle-ms = <HM_RPI_FAST>;
+			hold-trigger-key-positions = < KEYS_R THUMBS >;
+			bindings = <&kp>, <&kp>;
+			hold-trigger-on-release;
+		};
+		
+		hrs: home_row_mod_right_shift {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+			require-prior-idle-ms = <HM_RPI_FAST>;
+			hold-trigger-key-positions = < KEYS_L THUMBS >;
+			bindings = <&kp>, <&kp>;
+			hold-trigger-on-release;
+		};
+		
+		mqt: momentary-quick-tap {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <125>;
+			require-prior-idle-ms = <HM_RPI>;
+			bindings = <&mo>, <&kp>;
+		};
+
+		mqtm: momentary-quick-tap-magic {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <125>;
+			require-prior-idle-ms = <HM_RPI>;
+			bindings = <&mo>, <&mgs>;
+		};
+		
+		rpi: require-prior-idle {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <HM_TAPPING_TERM>;
+			quick-tap-ms = <200>;	
+			require-prior-idle-ms = <HM_RPI>;
+			bindings = <&kp>, <&kp>;
+		};
+	
+		// usd: up-side-down {
+		// 	compatible = "zmk,behavior-hold-tap";
+		// 	#binding-cells = <2>;
+		// 	flavor = "tap-preferred";
+		// 	tapping-term-ms = <175>;
+		// 	quick-tap-ms = <200>;	
+		// 	require-prior-idle-ms = <HM_RPI>;
+		// 	bindings = <&tog>, <&sl>;
+		// };
+	
+		// td: tap_dance_mod_tap {
+		// 	compatible = "zmk,behavior-tap-dance";
+		// 	#binding-cells = <0>;
+		// 	tapping-term-ms = <200>;
+		// 	bindings = <&kp>, <&kp>;
+		// };
+
+		usd: up-side-down {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&sl USD>, <&tog USD>;
+		};
+	};
+};

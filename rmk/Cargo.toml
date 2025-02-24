@@ -9,7 +9,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-# rmk = { version = "0.5.1", default-features = false, features = [
+# rmk = { version = "0.5.2", default-features = false, features = [
 rmk = { git = "https://github.com/haobogu/rmk", default-features = false, features = [
     "nrf52840_ble",
     "async_matrix",
@@ -42,6 +42,11 @@ panic-probe = { version = "0.3", features = ["print-defmt"] }
 xz2 = "0.1.7"
 json = "0.12"
 const-gen = "1.6"
+
+[[bin]]
+name = "sessile"
+test = false
+bench = false
 
 [profile.dev]
 codegen-units = 1      # better optimizations

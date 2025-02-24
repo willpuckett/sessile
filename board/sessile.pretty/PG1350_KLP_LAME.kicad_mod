@@ -181,7 +181,7 @@
 		(remove_unused_layers no)
 		(uuid "a6c29548-6403-4126-9a2c-db5c263241b9")
 	)
-	(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/pg1350.step"
+	(model "board/sessile.3dshapes/pg1350.step"
 		(offset
 			(xyz 0 0 2.1)
 		)
@@ -192,7 +192,7 @@
 			(xyz 0 0 180)
 		)
 	)
-	(model "/Users/puck/Public/ehrbl/library/ehrbl.3dshapes/KLP_Lame_Saddle.wrl"
+	(model "board/sessile.3dshapes/KLP_Lame_Saddle.wrl"
 		(offset
 			(xyz 0 0 4.7)
 		)

@@ -1,7 +1,7 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "ehrbl"
-product_name = "ehrbl"
+name = "sessile"
+product_name = "sessile"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "Octule"
@@ -25,7 +25,7 @@ keymap = [
     [
         ["B", "F", "D", "L"], ["P", "O", "U", "Y"],
         ["MT(C, LCtrl)", "MT(S, LAlt)", "MT(T, LGui)", "MT(R, LShift)"], ["MT(N, RShift)", "MT(A, RGui)", "MT(I, RAlt)", "MT(H, RCtrl)"],
-        ["V", "W", "G", "M"], ["K", "Comma", "Dot", "Quote"],
+        ["V", "G", "M", "W"], ["Dot", "Comma", "Quote", "K"],
         ["LT(2, Backspace)", "LT(1, Space)", "E", "Enter"]
     ],
     [
@@ -45,7 +45,7 @@ keymap = [
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
 capslock.pin = "P0_30"
-capslock.low_active = false
+capslock.low_active = true
 # scrolllock.pin = "PA3"
 # scrolllock.low_active = true
 # Just ignore if no light pin is used for it
@@ -65,11 +65,11 @@ battery_adc_pin = "vddh"
 # adc_divider_total = 2806
 charge_state.pin = "P0_14"
 charge_state.low_active = false
-charge_led.pin = "P1_06"
-charge_led.low_active = false
+# charge_led.pin = "P1_06"
+# charge_led.low_active = false
 
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, prior_idle_time = "100ms", hold_timeout = "200ms", post_wait_time = "15ms"}
+tap_hold = { enable_hrm = true, prior_idle_time = "200ms", hold_timeout = "280ms", post_wait_time = "10ms"}
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }

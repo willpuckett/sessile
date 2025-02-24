@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "sessile.overlay"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+		zmk,physical-layout = &default_layout;
+    };
+    
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};

@@ -1,0 +1,26 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SESSILE_DONGLE || SHIELD_SESSILE_CENTRAL
+
+config ZMK_KEYBOARD_NAME
+    default "sessile"
+
+config ZMK_USB
+	default y
+
+endif
+
+if SHIELD_SESSILE_DONGLE
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SESSILE_PERIPHERAL || SHIELD_SESSILE_DONGLE
+config ZMK_SPLIT
+    default y
+config ZMK_BLE
+	default y
+endif

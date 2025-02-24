@@ -1057,7 +1057,7 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 [[package]]
 name = "rmk"
 version = "0.5.2"
-source = "git+https://github.com/haobogu/rmk#8ec8a261314da03bb65d79850c90ed2a78728d90"
+source = "git+https://github.com/haobogu/rmk#43f6a011c2633da7b83d1403fb8043a79d5f4073"
 dependencies = [
  "bitfield-struct",
  "byteorder",
@@ -1093,7 +1093,7 @@ dependencies = [
 [[package]]
 name = "rmk-macro"
 version = "0.4.2"
-source = "git+https://github.com/haobogu/rmk#8ec8a261314da03bb65d79850c90ed2a78728d90"
+source = "git+https://github.com/haobogu/rmk#43f6a011c2633da7b83d1403fb8043a79d5f4073"
 dependencies = [
  "cargo_toml",
  "darling 0.20.10",
