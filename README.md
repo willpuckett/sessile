@@ -45,3 +45,8 @@ You can find the gerbers, bom, and cpl for JLC [here](board/output/pcbs/jlcpcb/p
 *Sessile* was produced using [studyofhands](https://github.com/willpuckett/studyofhands). 
 
 ![study of hands](.images/sessile_study.svg)
+
+## Keymap
+
+![Caster Befuddle Variant](.images/keymap_caster.svg)
+
