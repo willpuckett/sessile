@@ -54,8 +54,8 @@ ZMK_MACRO(ss, wait-ms = <10>; tap-ms = <10>; bindings= <&kp SPACE &sk LSHFT>;)
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
             defaults = <&rpi LT COMMA>;
-            bindings = <&sk LSHFT>, <&sk LSHFT>;
-            antecedents = <SPACE RET>;
+            bindings = <&sk LSHFT>, <&sk LSHFT>, <&sk LSHFT>, <&sk LSHFT>;
+            antecedents = <SPACE RET UNDER MINUS>;
             max-delay-ms = <1000>;
         };
     };
