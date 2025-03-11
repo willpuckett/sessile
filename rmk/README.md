@@ -1,39 +1,30 @@
-# RMK
+# RMK 
 
-Keyboard firmware for cortex-m, with layer/dynamic keymap/[vial](https://get.vial.today) support, written in Rust.
+RMK is a newer arrival to the firmware front, and isn't quite as fully featured. That said, it's more inline with the firmware I always hoped to find... And growing every day!
 
-## Checklist after generating the firmware project
+There are a number of useful commands documented in `../package.json`, including build and probe-rs commands.
 
-- [ ] Update `memory.x` for your microcontroller(if needed)
+## Updating Your Soft Device
 
-- [ ] Update your `keyboard.toml`
+To use RMK, you should be on Soft device S140 7.3.0. Begin by installing probe-rs using scripts (make sure you already have rustup installed https://rustup.rs)
+- ### Linux, macOS
+      curl --proto '=https' --tlsv1.2 -LsSf https://github.com/probe-rs/probe-rs/releases/latest/download/probe-rs-tools-installer.sh | sh
+- ### Windows
+      irm https://github.com/probe-rs/probe-rs/releases/latest/download/probe-rs-tools-installer.ps1 | iex
+Running `npm run erasexiao && npm run flashsoftdevice && npm run flashbootloader` from project root with your Xiao connected to a debugger should do the trick. You can check your current soft device by entering the bootloader and reading the last line of `INFO_UF2.TXT`--if you are already on 7.3.0 no need to update.
 
-- [ ] Create your `vial.json` by your layout: https://get.vial.today/docs/porting-to-via.html, replace the default one
+## Building
 
-- [ ] (Optional) Check the chip name of `probe-rs` is right, if you don't use `cargo run`, you can skip this step
+There is a recent build of rmk in this directory under `sessile.uf2`. 
 
-- [ ] Update the family ID of your microcontroller in `Makefile.toml`, if you want to generate .uf2 firmware. The available family ID can be found in `scripts/uf2conv.py`
+If you wish to build RMK yourself, 
 
-## For BLE only
+1. Install rust https://rustup.rs.
+2. `rustup target add thumbv7em-none-eabihf`
+3. `cargo install rmkit flip-link cargo-make`  
+4. From the project root, `npm run buildrmk` or `npm run buildrmkclean` to build and generate a UF2.
+5. Double tap the button on your Xiao to enter the bootloader and drag the UF2 to the disk.
 
-To use NRF BLE, you should have [nrf s140 softdevice 7.3.0](https://www.nordicsemi.com/Products/Development-software/s140/download) flashed to nrf52840 first. 
+## Caveats
 
-The following are the detailed steps:
-
-1. Erase the flash:
-   ```shell
-   probe-rs erase --chip nrf52840_xxAA
-   ```
-2. Flash softdevice firmware to flash:
-   ```shell
-   
-   probe-rs download --verify --format hex --chip nRF52840_xxAA s140_nrf52_7.3.0_softdevice.hex
-   ```
-3. Compile, flash and run the example
-   ```shell
-   cargo run --release
-   ```
-4. (Optional) generate .uf2 firmware
-   ```shell
-   cargo make uf2 --release
-   ```
+The keymap is not fully implemented in RMK. Combos can be setup in [Vial](https://get.vial.today) once the board has been flashed.

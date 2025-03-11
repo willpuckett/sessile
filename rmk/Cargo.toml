@@ -10,7 +10,7 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 # rmk = { version = "0.5.2", default-features = false, features = [
-rmk = { git = "https://github.com/haobogu/rmk", default-features = false, features = [
+rmk = { git = "https://github.com/HaoboGu/rmk", branch = "main", default-features = false, features = [
     "nrf52840_ble",
     "async_matrix",
     "defmt",
