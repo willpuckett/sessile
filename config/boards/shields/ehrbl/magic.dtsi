@@ -1,21 +1,37 @@
-ZMK_MACRO(he, wait-ms = <30>; tap-ms = <40>; bindings= <&kp H &kp E>;)
-ZMK_MACRO(an, wait-ms = <30>; tap-ms = <40>; bindings= <&kp A &kp N>;)
-ZMK_MACRO(nd, wait-ms = <30>; tap-ms = <40>; bindings= <&kp N &kp D>;)
-ZMK_MACRO(ng, wait-ms = <30>; tap-ms = <40>; bindings= <&kp N &kp G>;)
-ZMK_MACRO(er, wait-ms = <30>; tap-ms = <40>; bindings= <&kp E &kp R>;)
-ZMK_MACRO(nt, wait-ms = <30>; tap-ms = <40>; bindings= <&kp N &kp T>;)
-ZMK_MACRO(as, wait-ms = <30>; tap-ms = <40>; bindings= <&kp A &kp S>;)
-ZMK_MACRO(ou, wait-ms = <30>; tap-ms = <40>; bindings= <&kp O &kp U>;)
-ZMK_MACRO(er, wait-ms = <30>; tap-ms = <40>; bindings= <&kp E &kp R>;)
-ZMK_MACRO(ere, wait-ms = <30>; tap-ms = <40>; bindings= <&kp E &kp R &kp E>;)
-ZMK_MACRO(uld, wait-ms = <30>; tap-ms = <40>; bindings= <&kp U &kp L &kp D>;)
-ZMK_MACRO(ent, wait-ms = <30>; tap-ms = <40>; bindings= <&kp E &kp N &kp T>;)
-ZMK_MACRO(rom, wait-ms = <30>; tap-ms = <40>; bindings= <&kp R &kp O &kp M>;)
-ZMK_MACRO(the, wait-ms = <30>; tap-ms = <40>; bindings= <&kp LS(T) &kp H &kp E>;)
-ZMK_MACRO(but, wait-ms = <30>; tap-ms = <40>; bindings= <&kp SPACE &kp B &kp U &kp T>;)
-ZMK_MACRO(github, wait-ms = <30>; tap-ms = <40>; bindings= <&kp I &kp T &kp H &kp U &kp B>;)
-ZMK_MACRO(ght, wait-ms = <30>; tap-ms = <40>; bindings= <&kp G &kp H &kp T>;)
-ZMK_MACRO(le, wait-ms = <30>; tap-ms = <40>; bindings= <&kp L &kp E>;)
+#define WAIT 10
+#define TAP 10
+ZMK_MACRO(he, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp H &kp E>;)
+ZMK_MACRO(an, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp N>;)
+ZMK_MACRO(and, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp N &kp D>;)
+ZMK_MACRO(ng, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp N &kp G>;)
+ZMK_MACRO(er, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp E &kp R>;)
+ZMK_MACRO(ent, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp E &kp N &kp T>;)
+ZMK_MACRO(as, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp S>;)
+ZMK_MACRO(ou, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp O &kp U>;)
+ZMK_MACRO(re, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp R &kp E>;)
+ZMK_MACRO(uld, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp U &kp L &kp D>;)
+ZMK_MACRO(en, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp E &kp N>;)
+ZMK_MACRO(rom, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp R &kp O &kp M>;)
+ZMK_MACRO(the, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp T &kp H &kp E>;)
+ZMK_MACRO(but, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp SPACE &kp B &kp U &kp T>;)
+ZMK_MACRO(github, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp T &kp H &kp U &kp B>;)
+ZMK_MACRO(gh, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp G &kp H>;)
+ZMK_MACRO(le, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp L &kp E>;)
+ZMK_MACRO(ion, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp O &kp N>;)
+ZMK_MACRO(ave, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp V &kp E>;)
+ZMK_MACRO(efore, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp E &kp F &kp O &kp R &kp E>;)
+ZMK_MACRO(or, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp O &kp R>;)
+ZMK_MACRO(ion, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp O &kp N>;)
+ZMK_MACRO(ith, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp T &kp H>;)
+ZMK_MACRO(ut, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp U &kp T>;) 
+ZMK_MACRO(ht, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp H &kp T>;)
+ZMK_MACRO(nd, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp N &kp D>;)
+ZMK_MACRO(ike, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp K &kp E>;)
+ZMK_MACRO(at, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp T>;)
+ZMK_MACRO(af, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp GT>;) 
+ZMK_MACRO(ce, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp C &kp E>;)
+
+
 
 &sk {
     release-after-ms = <2000>;
@@ -26,13 +42,29 @@ ZMK_MACRO(ss, wait-ms = <10>; tap-ms = <10>; bindings= <&kp SPACE &sk LSHFT>;)
 
 / {
     behaviors {
-        magic: adaptive_magic {
+        // magic: adaptive_magic {
+        //     compatible = "zmk,behavior-antecedent-morph";
+        //     #binding-cells = <0>;
+        //     defaults = <&kp RETURN>;
+        //     bindings = <&he>, <&an>, <&kp O>, <&ng>, <&er>, <&nt>, <&as>, <&ou>, <&kp E>, <&uld>, <&ent>, <&rom>, <&the>, <&but>, <&github>, <&ght>, <&kp Y>, <&kp O>, <&kp E>;
+        //     antecedents = <T C Z I H E W Y V O M F DOT COMMA G U B J K>;
+        //     max-delay-ms = <300>;
+        // };
+        larcane: arcane_left {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
-            defaults = <&kp RETURN>;
-            bindings = <&he>, <&an>, <&kp O>, <&nd>, <&ng>, <&er>, <&nt>, <&as>, <&ou>, <&kp E>, <&uld>, <&ent>, <&rom>, <&the>, <&but>, <&github>, <&ght>, <&kp Y>, <&kp O>, <&kp E>;
-            antecedents = <T C Z A I H E W Y V O M F DOT COMMA G U B J K>;
-            max-delay-ms = <300>;
+            defaults = <&kp BSPC>;
+            bindings = <&kp R>, <&uld>, <&gh>, <&ou>, <&ce>, <&nd>, <&ng>, <&at>, <&re>, <&but>, <&and>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>;
+            antecedents = <P O U Y N A I H E COMMA SPACE B F D L C S T R V G M W Z J X>;
+            max-delay-ms = <500>;
+        };
+        rarcane: arcane_right {
+            compatible = "zmk,behavior-antecedent-morph";
+            #binding-cells = <0>;
+            defaults = <&kp RET>;
+            bindings = <&ut>, <&or>, <&kp G>, <&ike>, <&an>, <&ion>, <&ion>, <&kp O>, <&er>, <&ht>, <&en>, <&ith>, <&the>, <&af>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>;
+            antecedents = <B F D L C S T R V G M W SPACE EQUAL P O U Y N A I H E K>;
+            max-delay-ms = <500>;
         };
         mgs: adaptive_magic_space {
             compatible = "zmk,behavior-antecedent-morph";
@@ -42,14 +74,14 @@ ZMK_MACRO(ss, wait-ms = <10>; tap-ms = <10>; bindings= <&kp SPACE &sk LSHFT>;)
             antecedents = <DOT QMARK EXCL>;
             max-delay-ms = <1000>;
         };
-        mge: adaptive_magic_ret {
-            compatible = "zmk,behavior-antecedent-morph";
-            #binding-cells = <0>;
-            defaults = <&sk LSHFT>;
-            bindings = <&kp RET>, <&kp RET>, <&kp RET>, <&kp RET>, <&kp RET>;
-            antecedents = <DOT QMARK EXCL SQT DQT>;
-            max-delay-ms = <1000>;
-        };
+        // mge: adaptive_magic_ret {
+        //     compatible = "zmk,behavior-antecedent-morph";
+        //     #binding-cells = <0>;
+        //     defaults = <&sk LSHFT>;
+        //     bindings = <&kp RET>, <&kp RET>, <&kp RET>, <&kp RET>, <&kp RET>;
+        //     antecedents = <DOT QMARK EXCL SQT DQT>;
+        //     max-delay-ms = <1000>;
+        // };
         mgc: adaptive_magic_comma {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;

@@ -30,8 +30,8 @@
 			bindings = <
 			&kp B		 &kp F     		&kp D     	     &kp L       		&kp P     	 &kp O  	   &kp U  	   &kp Y  	
 			&hl LCTRL C  &hl LALT S 	&hl LGUI T  	 &hls LSHFT R       &hrs RSHFT N &hr RGUI A    &hr RALT I  &hr RCTRL H
-			&kp V		 &kp G 			&kp M     		 &kp W      		&rpi GT DOT  &mgc 		   &rpi DQT SQT &kp K  		 
-										&mqt FUN BSPC    &mqtm NUM SPACE    &kp E        &kp RET   
+			&kp V		 &kp G 			&kp M     		 &kp W      		&rpi GT DOT  &mgc 		   &rpi DQT SQT &rpi COLON SEMI  		 
+										&mqtla FUN BSPC   &mqtm NUM SPACE   &kp E       &rarcane
 			>;
 		};
 		num_layer {
@@ -39,7 +39,7 @@
 			&kp KP_ENTER    &kp KP_N7      &kp KP_N8      &kp KP_N9          &trans  		 &trans		   &trans 	    &trans
 			&hs LCTRL KP_N0 &hs LALT KP_N4 &hs LGUI KP_N5 &hs LSHFT KP_N6   &hs LSHFT LEFT &hs RGUI DOWN &hs RALT UP  &hs RCTRL RIGHT
 			&kp KP_DOT      &kp KP_N1      &kp KP_N2      &kp KP_N3          &kp HOME  		 &kp PG_DN     &kp PG_UP    &kp END
-										   &rpi DQT SQT   &trans             &kp K_CANCEL    &trans 			    
+										   &rpi DQT SQT   &trans             &kp K_CANCEL    &kp RET 			    
 			>;
 		};
 		fun_layer {
