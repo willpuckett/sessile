@@ -30,7 +30,7 @@
 			bindings = <
 			&kp B		 &kp F     		&kp D     	     &kp L       		&kp P     	 &kp O  	   &kp U  	   &kp Y  	
 			&hl LCTRL C  &hl LALT S 	&hl LGUI T  	 &hls LSHFT R       &hrs RSHFT N &hr RGUI A    &hr RALT I  &hr RCTRL H
-			&kp V		 &kp G 			&kp M     		 &kp W      		&rpi GT DOT  &mgc 		   &rpi DQT SQT &rpi COLON SEMI  		 
+			&kp V		 &kp G 			&kp M     		 &kp W      		&rpi GT DOT  &mgc 		   &rpi DQT SQT &altb  		 
 										&mqtla FUN BSPC   &mqtm NUM SPACE   &kp E       &rarcane
 			>;
 		};

@@ -1,3 +1,8 @@
+name: zmk-keyboard-sessile
 build:
+  depends:
+    - urob/zmk-auto-layer
+    - urob/zmk-helpers
+    - ssbb/zmk-antecedent-morph
   settings:
-    board_root: .
+    board_root: config

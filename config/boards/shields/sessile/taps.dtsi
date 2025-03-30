@@ -24,7 +24,7 @@
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM>;
-			require-prior-idle-ms = <HM_RPI>;
+			require-prior-idle-ms = <HM_RPI_FAST>;
 			hold-trigger-key-positions = < KEYS_R THUMBS >;
 			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
@@ -35,7 +35,7 @@
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM>;
-			require-prior-idle-ms = <HM_RPI>;
+			require-prior-idle-ms = <HM_RPI_FAST>;
 			hold-trigger-key-positions = < KEYS_L THUMBS >;
 			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;

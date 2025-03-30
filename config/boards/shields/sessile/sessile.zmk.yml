@@ -6,6 +6,3 @@ url: https://github.com/willpuckett/sessile
 requires: [seeed_xiao_ble]
 features:
   - keys
-siblings:
-  - sessile_left
-  - sessile_right

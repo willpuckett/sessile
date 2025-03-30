@@ -30,6 +30,7 @@ ZMK_MACRO(ike, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp I &kp K &kp E>;)
 ZMK_MACRO(at, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp A &kp T>;)
 ZMK_MACRO(af, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp GT>;) 
 ZMK_MACRO(ce, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp C &kp E>;)
+ZMK_MACRO(altb, wait-ms = <WAIT>; tap-ms = <TAP>; bindings= <&kp LA(BSPC)>;)
 
 
 
@@ -56,7 +57,7 @@ ZMK_MACRO(ss, wait-ms = <10>; tap-ms = <10>; bindings= <&kp SPACE &sk LSHFT>;)
             defaults = <&kp BSPC>;
             bindings = <&kp R>, <&uld>, <&gh>, <&ou>, <&ce>, <&nd>, <&ng>, <&at>, <&re>, <&but>, <&and>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>;
             antecedents = <P O U Y N A I H E COMMA SPACE B F D L C S T R V G M W Z J X>;
-            max-delay-ms = <500>;
+            max-delay-ms = <600>;
         };
         rarcane: arcane_right {
             compatible = "zmk,behavior-antecedent-morph";
@@ -64,7 +65,7 @@ ZMK_MACRO(ss, wait-ms = <10>; tap-ms = <10>; bindings= <&kp SPACE &sk LSHFT>;)
             defaults = <&kp RET>;
             bindings = <&ut>, <&or>, <&kp G>, <&ike>, <&an>, <&ion>, <&ion>, <&kp O>, <&er>, <&ht>, <&en>, <&ith>, <&the>, <&af>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>, <&key_repeat>;
             antecedents = <B F D L C S T R V G M W SPACE EQUAL P O U Y N A I H E K>;
-            max-delay-ms = <500>;
+            max-delay-ms = <600>;
         };
         mgs: adaptive_magic_space {
             compatible = "zmk,behavior-antecedent-morph";
