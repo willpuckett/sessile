@@ -66,3 +66,10 @@ Both zmk and rmk flashed boards can be configured via their guis... [Vial](https
 ![Caster Befuddle Variant](.images/keymap_caster.svg)
 
 
+## Matrix Diagram
+
+Sessile uses the following pinout for its matrix:
+
+![sessile_matrix](.images/matrix.svg)
+
+Referencing [this pinout sheet provided by Seeed](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx), the only two exposed high speed pins P0_04/SDA/D4 & P0_05/SCL/D5 have been left available for possible encoders in a subsequent revision.
