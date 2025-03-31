@@ -5,4 +5,4 @@ build:
     - zmk-helpers
     - zmk-antecedent-morph
   settings:
-    board_root: config
+    board_root: .
