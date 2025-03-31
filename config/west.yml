@@ -21,4 +21,4 @@ manifest:
       remote: ssbb
       revision: v1
   self:
-    path: .
+    path: config
