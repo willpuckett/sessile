@@ -21,7 +21,7 @@ project=$(pwd)
 out="$project/out"
 [[ -d $out ]] || mkdir "$out"
 
-json=$(yq .include "$project/config/build.yml")
+json=$(yq .include "$project/build.yml")
 length=$(jq length <<< $json)
 
 . ~/Public/zmk/.venv/bin/activate
