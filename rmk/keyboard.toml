@@ -1,4 +1,5 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
+
 [keyboard]
 name = "sessile"
 product_name = "sessile"
@@ -20,7 +21,7 @@ row2col = true
 # row2col = true
 rows = 7
 cols = 4
-layers = 3
+layers = 4
 keymap = [
     [
         ["B", "F", "D", "L"], ["P", "O", "U", "Y"],
@@ -39,6 +40,12 @@ keymap = [
         ["F11", "F4", "F5", "F6"], ["__", "__", "__", "__"],
         ["F10", "F1", "F2", "F3"], ["__", "__", "__", "__"],
         ["__", "__", "__", "__"]
+    ],
+    [
+        ["Y", "U", "O", "P"], ["L", "D", "F", "B"],
+        ["MT(H, LCtrl)", "MT(I, LAlt)", "MT(A, LGui)", "MT(N, LShift)"], ["MT(R, RShift)", "MT(T, RGui)", "MT(S, RAlt)", "MT(C, RCtrl)"],
+        ["K", "Quote", "Comma", "Dot"], ["W", "M", "G", "V"],
+        ["LT(2, Enter)", "LT(1, E)", "Space", "Backspace"]
     ],
 ]
 
@@ -68,8 +75,55 @@ charge_state.low_active = false
 # charge_led.pin = "P1_06"
 # charge_led.low_active = false
 
+# See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
 tap_hold = { enable_hrm = true, prior_idle_time = "200ms", hold_timeout = "280ms", post_wait_time = "10ms"}
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
+
+[behavior.combo]
+timeout = "25ms"
+combos = [
+    # Press J and K keys simultaneously to output Escape key
+    { actions = ["F", "D", "L"], output = "Escape", layer = 0 },
+    { actions = ["R", "N"], output = "CapsLock", layer = 0 },
+    { actions = ["MT(S, LAlt)", "MT(T, LGui)", "MT(R, LShift)"], output = "OSL(3)", layer = 0 },
+    { actions = ["B", "F"], output = "Grave", layer = 0 },
+    { actions = ["MT(C, LCtrl)", "MT(S, LAlt)"], output = "Tab", layer = 0 },
+    { actions = ["G", "M"], output = "Minus", layer = 0 },
+    { actions = ["Dot", "Comma"], output = "Slash", layer = 0},
+    { actions = ["MT(I, RAlt)", "MT(H, RCtrl)"], output = "Semicolon", layer = 0 },
+    { actions = ["D", "L"], output = "Equal", layer = 0 },
+    { actions = ["P", "O"], output = "Backslash", layer = 0 },
+    { actions = ["O", "U"], output = "LeftBracket", layer = 0 },
+    { actions = ["Comma", "Quote"], output = "RightBracket", layer = 0},
+    { actions = ["V", "G"], output = "Q", layer = 0 },
+    { actions = ["G", "M"], output = "J", layer = 0 },
+    { actions = ["F", "D"], output = "X", layer = 0 },
+    { actions = ["V", "W"], output = "Z", layer = 0 },
+    { actions = ["O", "Y"], output = "K", layer = 0 },
+    { actions = ["B", "MT(C, LCtrl)"], output = "Kc1", layer = 0 },
+    { actions = ["F", "MT(S, LAlt)"], output = "Kc2", layer = 0 },
+    { actions = ["D", "MT(T, LGui)"], output = "Kc3", layer = 0 },
+    { actions = ["L", "MT(R, LShift)"], output = "Kc4", layer = 0 },
+    { actions = ["LT(2, Backspace)", "LT(1, Space)"], output = "Kc5", layer = 0 },
+    { actions = ["E", "Enter"], output = "Kc6", layer = 0 },
+    { actions = ["P", "MT(N, RShift)"], output = "Kc7", layer = 0 },
+    { actions = ["O", "MT(A, RGui)"], output = "Kc8", layer = 0 },
+    { actions = ["U", "MT(I, RAlt)"], output = "Kc9", layer = 0 },
+    { actions = ["Y", "MT(H, RCtrl)"], output = "Kc0", layer = 0 },
+    { actions = ["V", "MT(C, LCtrl)"], output = "WM(Z, LGui)", layer = 0 },
+    { actions = ["G", "MT(S, LAlt)"], output = "WM(X, LGui)", layer = 0 },
+    { actions = ["M", "MT(T, LGui)"], output = "WM(C, LGui)", layer = 0 },
+    { actions = ["W", "MT(R, LShift)"], output = "WM(V, LGui)", layer = 0 },
+    { actions = ["Dot", "MT(N, RShift)"], output = "Left", layer = 0 },
+    { actions = ["Comma", "MT(A, RGui)"], output = "Down", layer = 0 },
+    { actions = ["Quote", "MT(I, RAlt)"], output = "UP", layer = 0 },
+    { actions = ["K", "MT(H, RCtrl)"], output = "Right", layer = 0 }
+]
+
+
+[rmk]
+# Maximum number of combos keyboard can store
+combo_max_num = 128

@@ -1,6 +1,6 @@
 [package]
 name = "sessile"
-version = "0.0.1"
+version = "0.2.0"
 description = "Keyboard firmware written in Rust"
 homepage = ""
 repository = ""
@@ -9,33 +9,57 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-# rmk = { version = "0.5.2", default-features = false, features = [
-rmk = { git = "https://github.com/HaoboGu/rmk", branch = "main", default-features = false, features = [
-    "nrf52840_ble",
-    "async_matrix",
+# rmk = { version = "0.7.3", default-features = false, features = [
+rmk = { git = "https://github.com/HaoboGu/rmk", branch = "main", default-features = false, features = ["async_matrix", "nrf52840_ble", "adafruit_bl", "storage"] }
+nrf-sdc = { version = "0.1.0", default-features = false, features = [
     "defmt",
-    ] }
+    "peripheral",
+    "nrf52840",
+] }
+nrf-mpsl = { version = "0.1.0", default-features = false, features = [
+    "defmt",
+    "critical-section-impl",
+    "nrf52840",
+] }
+bt-hci = { version = "0.3", default-features = false, features = ["defmt"] }
+
+cortex-m = "0.7.7"
 cortex-m-rt = "0.7.5"
-cortex-m = "0.7.5"
 embassy-time = { version = "0.4", features = ["tick-hz-32_768", "defmt"] }
 embassy-nrf = { version = "0.3.1", features = [
-    "nrf52840",
     "defmt",
+    "nrf52840",
     "time-driver-rtc1",
-    "unstable-pac",
     "gpiote",
-    "time",
+    "unstable-pac",
     "nfc-pins-as-gpio",
+    "time",
 ] }
 embassy-executor = { version = "0.7", features = [
     "defmt",
-    "task-arena-size-32768", # TODO: Change it to 16384 or less if you're using nRF52832/11/10
     "arch-cortex-m",
     "executor-thread",
 ] }
-defmt = "0.3"
-defmt-rtt = "0.4"
-panic-probe = { version = "0.3", features = ["print-defmt"] }
+defmt = "1.0"
+defmt-rtt = "1.0"
+panic-probe = { version = "1.0", features = ["print-defmt"] }
+static_cell = "2"
+
+rand = { version = "0.8.4", default-features = false }
+rand_core = { version = "0.6" }
+rand_chacha = { version = "0.3", default-features = false }
+
+[patch.crates-io]
+embassy-sync = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-futures = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-executor = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-nrf = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-time = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-usb = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+embassy-embedded-hal = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
+nrf-sdc = { git = "https://github.com/alexmoon/nrf-sdc.git", rev = "7be9b853e15ca0404d65c623d1ec5795fd96c204" }
+nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc.git", rev = "7be9b853e15ca0404d65c623d1ec5795fd96c204" }
+bt-hci = { git = "https://github.com/embassy-rs/bt-hci", rev = "50c443e088ab9c405e44a10e98915b445ed7b750" }
 
 
 [build-dependencies]

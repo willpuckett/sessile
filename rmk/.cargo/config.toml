@@ -11,3 +11,4 @@ target = "thumbv7em-none-eabihf"
 [env]
 # TODO: set DEFMT_LOG to "error" to reduce the binary size
 DEFMT_LOG = "info"
+KEYBOARD_TOML_PATH =  { value = "keyboard.toml", relative = true }
