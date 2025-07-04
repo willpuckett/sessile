@@ -178,7 +178,8 @@ dependencies = [
 [[package]]
 name = "bt-hci"
 version = "0.3.2"
-source = "git+https://github.com/embassy-rs/bt-hci?rev=50c443e088ab9c405e44a10e98915b445ed7b750#50c443e088ab9c405e44a10e98915b445ed7b750"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa7f7c19df9648c1da4f5356c4256533e38bd65633b6a41654922475a1c6d777"
 dependencies = [
  "defmt 1.0.1",
  "embassy-sync",
@@ -220,9 +221,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.27"
+version = "1.2.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d487aa071b5f64da6f19a3e848e3578944b726ee5a4854b82172f02aa876bfdc"
+checksum = "4ad45f4f74e4e20eaa392913b7b33a7091c87e59628f4dd27888205ad888843c"
 dependencies = [
  "shlex",
 ]
@@ -1743,8 +1744,8 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
 name = "rmk"
-version = "0.7.3"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#53de573c71c5e10136870f915edc61894f19c68f"
+version = "0.7.4"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
 dependencies = [
  "bitfield-struct",
  "bt-hci",
@@ -1786,8 +1787,8 @@ dependencies = [
 
 [[package]]
 name = "rmk-config"
-version = "0.5.2"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#53de573c71c5e10136870f915edc61894f19c68f"
+version = "0.5.3"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
 dependencies = [
  "cargo_toml",
  "config",
@@ -1803,8 +1804,8 @@ dependencies = [
 
 [[package]]
 name = "rmk-macro"
-version = "0.6.3"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#53de573c71c5e10136870f915edc61894f19c68f"
+version = "0.6.4"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
 dependencies = [
  "cargo_toml",
  "darling",
@@ -1835,13 +1836,12 @@ dependencies = [
 
 [[package]]
 name = "rust-ini"
-version = "0.21.1"
+version = "0.21.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4e310ef0e1b6eeb79169a1171daf9abcb87a2e17c03bee2c4bb100b55c75409f"
+checksum = "e7295b7ce3bf4806b419dc3420745998b447178b7005e2011947b38fc5aa6791"
 dependencies = [
  "cfg-if",
  "ordered-multimap",
- "trim-in-place",
 ]
 
 [[package]]
@@ -2168,16 +2168,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
 
 [[package]]
-name = "trim-in-place"
-version = "0.1.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "343e926fc669bc8cde4fa3129ab681c63671bae288b1f1081ceee6d9d37904fc"
-
-[[package]]
 name = "trouble-host"
 version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a46c53d297c6d0556fc510cddf5446eada88db23735705d3c071cb42c43783b8"
+source = "git+https://github.com/embassy-rs/trouble?rev=90c6359#90c6359aff5ad80e80c008517a966c5682b0993b"
 dependencies = [
  "aes",
  "bt-hci",
@@ -2199,8 +2192,7 @@ dependencies = [
 [[package]]
 name = "trouble-host-macros"
 version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab5c25c521a9a0cad8c62b86bd3ca9abd6c94842ecf62b64fc56f0d91bb1a426"
+source = "git+https://github.com/embassy-rs/trouble?rev=90c6359#90c6359aff5ad80e80c008517a966c5682b0993b"
 dependencies = [
  "convert_case 0.8.0",
  "darling",

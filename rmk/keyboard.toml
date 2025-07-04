@@ -1,24 +1,20 @@
-# Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
-
 [keyboard]
 name = "sessile"
 product_name = "sessile"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "Octule"
+manufacturer = "RMK"
 board = "XIAO BLE"
 
 [matrix]
 # Input and output pins are mandatory
-# NFC: GPIO 0.9 and 0.10
 input_pins = ["P1_12", "P0_10", "P0_09", "P1_11"]
 output_pins = ["P0_02", "P1_15", "P0_03", "P1_14", "P0_28", "P1_13", "P0_29"]
-# WARNING: Currently row2col/col2row is set in RMK's feature gate, row2col config here is valid ONLY when you're using cloud compilation
-row2col = true
+# WARNING: Currently row2col/col2row is set in RMK's feature gate, row2col config here is valid ONLY when you're using cloud compilation.
+# Checkout doc here: https://rmk.rs/docs/user_guide/faq.html#my-matrix-is-row2col-the-matrix-doesn-t-work
+# row2col = true
 
 [layout]
-# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
-# row2col = true
 rows = 7
 cols = 4
 layers = 4
@@ -49,36 +45,17 @@ keymap = [
     ],
 ]
 
-[light]
-# All light pins are high-active by default, uncomment if you want it to be low-active
-capslock.pin = "P0_30"
-capslock.low_active = true
-# scrolllock.pin = "PA3"
-# scrolllock.low_active = true
-# Just ignore if no light pin is used for it
-# numslock.pin = "PA5"
-# numslock.low_active = true
+
+[ble]
+enabled = true
 
 [storage]
 clear_storage = true
 
-[ble]
-enabled = true
-# vddh has an internal voltage divider
-battery_adc_pin = "vddh"
-# Or
-# battery_adc_pin = "P0_04"
-# adc_divider_measured = 2000
-# adc_divider_total = 2806
-charge_state.pin = "P0_14"
-charge_state.low_active = false
-# charge_led.pin = "P1_06"
-# charge_led.low_active = false
-
 # See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, prior_idle_time = "200ms", hold_timeout = "280ms", post_wait_time = "10ms"}
+tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "120ms", hold_timeout = "250ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 
@@ -86,12 +63,12 @@ tap_hold = { enable_hrm = true, prior_idle_time = "200ms", hold_timeout = "280ms
 timeout = "25ms"
 combos = [
     # Press J and K keys simultaneously to output Escape key
-    { actions = ["F", "D", "L"], output = "Escape", layer = 0 },
-    { actions = ["R", "N"], output = "CapsLock", layer = 0 },
+    { actions = ["D", "L", "F"], output = "Escape", layer = 0 },
+    { actions = ["MT(R, LShift)", "MT(N, RShift)"], output = "CapsLock", layer = 0 },
     { actions = ["MT(S, LAlt)", "MT(T, LGui)", "MT(R, LShift)"], output = "OSL(3)", layer = 0 },
     { actions = ["B", "F"], output = "Grave", layer = 0 },
     { actions = ["MT(C, LCtrl)", "MT(S, LAlt)"], output = "Tab", layer = 0 },
-    { actions = ["G", "M"], output = "Minus", layer = 0 },
+    { actions = ["W", "M"], output = "Minus", layer = 0 },
     { actions = ["Dot", "Comma"], output = "Slash", layer = 0},
     { actions = ["MT(I, RAlt)", "MT(H, RCtrl)"], output = "Semicolon", layer = 0 },
     { actions = ["D", "L"], output = "Equal", layer = 0 },
@@ -102,7 +79,7 @@ combos = [
     { actions = ["G", "M"], output = "J", layer = 0 },
     { actions = ["F", "D"], output = "X", layer = 0 },
     { actions = ["V", "W"], output = "Z", layer = 0 },
-    { actions = ["O", "Y"], output = "K", layer = 0 },
+    { actions = ["U", "Y"], output = "K", layer = 0 },
     { actions = ["B", "MT(C, LCtrl)"], output = "Kc1", layer = 0 },
     { actions = ["F", "MT(S, LAlt)"], output = "Kc2", layer = 0 },
     { actions = ["D", "MT(T, LGui)"], output = "Kc3", layer = 0 },
@@ -126,4 +103,4 @@ combos = [
 
 [rmk]
 # Maximum number of combos keyboard can store
-combo_max_num = 128
+combo_max_num = 64

@@ -1,15 +1,16 @@
 [package]
 name = "sessile"
 version = "0.2.0"
+authors = ["Will Puckett <willpuckett@gmail.com>"]
 description = "Keyboard firmware written in Rust"
-homepage = ""
-repository = ""
-readme = ""
+homepage = "https://github.com/willpuckett/sessile"
+repository = "https://github.com/willpuckett/sessile"
+readme = "README.md"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-# rmk = { version = "0.7.3", default-features = false, features = [
+# rmk = { version = "0.7", default-features = false, features = ["async_matrix", "nrf52840_ble", "adafruit_bl", "storage"] }
 rmk = { git = "https://github.com/HaoboGu/rmk", branch = "main", default-features = false, features = ["async_matrix", "nrf52840_ble", "adafruit_bl", "storage"] }
 nrf-sdc = { version = "0.1.0", default-features = false, features = [
     "defmt",
@@ -59,8 +60,7 @@ embassy-usb = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4
 embassy-embedded-hal = { git = "https://github.com/embassy-rs/embassy.git", rev = "f35aa4005a63e8d478b2b95aaa2bfb316b72dece" }
 nrf-sdc = { git = "https://github.com/alexmoon/nrf-sdc.git", rev = "7be9b853e15ca0404d65c623d1ec5795fd96c204" }
 nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc.git", rev = "7be9b853e15ca0404d65c623d1ec5795fd96c204" }
-bt-hci = { git = "https://github.com/embassy-rs/bt-hci", rev = "50c443e088ab9c405e44a10e98915b445ed7b750" }
-
+trouble-host = { git = "https://github.com/embassy-rs/trouble", rev = "90c6359" }
 
 [build-dependencies]
 xz2 = "0.1.7"
