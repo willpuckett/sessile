@@ -18,33 +18,48 @@ output_pins = ["P0_02", "P1_15", "P0_03", "P1_14", "P0_28", "P1_13", "P0_29"]
 rows = 7
 cols = 4
 layers = 4
-keymap = [
-    [
-        ["B", "F", "D", "L"], ["P", "O", "U", "Y"],
-        ["MT(C, LCtrl)", "MT(S, LAlt)", "MT(T, LGui)", "MT(R, LShift)"], ["MT(N, RShift)", "MT(A, RGui)", "MT(I, RAlt)", "MT(H, RCtrl)"],
-        ["V", "G", "M", "W"], ["Dot", "Comma", "Quote", "K"],
-        ["LT(2, Backspace)", "LT(1, Space)", "E", "Enter"]
-    ],
-    [
-        ["KpEnter", "Kp7", "Kp8", "Kp9"], ["KbVolumeDown", "KbMute", "KbVolumeUp", "__"],
-        ["Kp0", "Kp4", "Kp5", "Kp6"], ["Left", "Down", "UP", "Right"],
-        ["KpDot", "Kp1", "Kp2", "Kp3"], ["Home", "PageDown", "PageUp", "End"],
-        ["__", "__", "__", "__"]
-    ],
-    [
-        ["F12", "F7", "F8", "F9"], ["__", "__", "__", "__"],
-        ["F11", "F4", "F5", "F6"], ["__", "__", "__", "__"],
-        ["F10", "F1", "F2", "F3"], ["__", "__", "__", "__"],
-        ["__", "__", "__", "__"]
-    ],
-    [
-        ["Y", "U", "O", "P"], ["L", "D", "F", "B"],
-        ["MT(H, LCtrl)", "MT(I, LAlt)", "MT(A, LGui)", "MT(N, LShift)"], ["MT(R, RShift)", "MT(T, RGui)", "MT(S, RAlt)", "MT(C, RCtrl)"],
-        ["K", "Quote", "Comma", "Dot"], ["W", "M", "G", "V"],
-        ["LT(2, Enter)", "LT(1, E)", "Space", "Backspace"]
-    ],
-]
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3) (1,0) (1,1) (1,2) (1,3)
+(2,0) (2,1) (2,2) (2,3) (3,0) (3,1) (3,2) (3,3)
+(4,0) (4,1) (4,2) (4,3) (5,0) (5,1) (5,2) (5,3)
+            (6,0) (6,1) (6,2) (6,3)
+"""
 
+[[layer]]
+name = "caster"
+keys = """
+B F D L P O U Y
+MT(C, LCtrl) MT(S, LAlt) MT(T, LGui) MT(R, LShift) MT(N, RShift) MT(A, RGui) MT(I, RAlt) MT(H, RCtrl)
+V G M W Dot Comma Quote K
+LT(2, Backspace) LT(1, Space) E Enter
+"""
+
+[[layer]]
+name = "numbnav"
+keys = """
+KpEnter Kp7 Kp8 Kp9 KbVolumeDown KbMute KbVolumeUp __
+Kp0 Kp4 Kp5 Kp6 Left Down UP Right
+KpDot Kp1 Kp2 Kp3 Home PageDown PageUp End
+__ __ __ __
+"""
+
+[[layer]]
+name = "function"
+keys = """
+F12 F7 F8 F9 __ __ __ __
+F11 F4 F5 F6 __ __ __ __
+F10 F1 F2 F3 __ __ __ __
+__ __ __ __
+"""
+
+[[layer]]
+name = "upsidedown"
+keys = """
+Y U O P L D F B
+MT(H, LCtrl) MT(I, LAlt) MT(A, LGui) MT(N, LShift) MT(R, RShift) MT(T, RGui) MT(S, RAlt) MT(C, RCtrl)
+K Quote Comma Dot W M G V
+LT(2, Enter) LT(1, E) Space Backspace
+"""
 
 [ble]
 enabled = true
@@ -55,7 +70,7 @@ clear_storage = true
 # See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "120ms", hold_timeout = "250ms" }
+tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "455ms", hold_timeout = "200ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 
