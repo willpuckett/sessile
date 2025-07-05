@@ -221,9 +221,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.28"
+version = "1.2.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ad45f4f74e4e20eaa392913b7b33a7091c87e59628f4dd27888205ad888843c"
+checksum = "5c1599538de2394445747c8cf7935946e3cc27e9625f889d979bfb2aaf569362"
 dependencies = [
  "shlex",
 ]
@@ -1745,7 +1745,7 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 [[package]]
 name = "rmk"
 version = "0.7.4"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
+source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
 dependencies = [
  "bitfield-struct",
  "bt-hci",
@@ -1788,7 +1788,7 @@ dependencies = [
 [[package]]
 name = "rmk-config"
 version = "0.5.3"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
+source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
 dependencies = [
  "cargo_toml",
  "config",
@@ -1805,7 +1805,7 @@ dependencies = [
 [[package]]
 name = "rmk-macro"
 version = "0.6.4"
-source = "git+https://github.com/HaoboGu/rmk?branch=main#214d22c0a0247b110d748355507fc2665abb3253"
+source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
 dependencies = [
  "cargo_toml",
  "darling",
