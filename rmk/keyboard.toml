@@ -70,7 +70,7 @@ clear_storage = true
 # See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "50ms", hold_timeout = "200ms" }
+tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "100ms", hold_timeout = "200ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 

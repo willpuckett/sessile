@@ -1744,8 +1744,8 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
 name = "rmk"
-version = "0.7.4"
-source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
+version = "0.7.5"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#e57982b5143874a79cac26f8308d473b3d7fb0a7"
 dependencies = [
  "bitfield-struct",
  "bt-hci",
@@ -1787,8 +1787,8 @@ dependencies = [
 
 [[package]]
 name = "rmk-config"
-version = "0.5.3"
-source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
+version = "0.5.4"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#e57982b5143874a79cac26f8308d473b3d7fb0a7"
 dependencies = [
  "cargo_toml",
  "config",
@@ -1804,8 +1804,8 @@ dependencies = [
 
 [[package]]
 name = "rmk-macro"
-version = "0.6.4"
-source = "git+https://github.com/HaoboGu/rmk?rev=refs%2Fpull%2F440%2Fhead#4dc9b438106d884af06be22bdfb32c7205d276d4"
+version = "0.6.5"
+source = "git+https://github.com/HaoboGu/rmk?branch=main#e57982b5143874a79cac26f8308d473b3d7fb0a7"
 dependencies = [
  "cargo_toml",
  "darling",
