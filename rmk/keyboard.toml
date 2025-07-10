@@ -30,7 +30,7 @@ name = "caster"
 keys = """
 B F D L P O U Y
 MT(C, LCtrl) MT(S, LAlt) MT(T, LGui) MT(R, LShift) MT(N, RShift) MT(A, RGui) MT(I, RAlt) MT(H, RCtrl)
-V G M W Dot Comma Quote K
+V G M W Dot Comma Quote OSM(LShift)
 LT(2, Backspace) LT(1, Space) E Enter
 """
 
@@ -63,6 +63,11 @@ LT(2, Enter) LT(1, E) Space Backspace
 
 [ble]
 enabled = true
+# battery_adc_pin = "vddh"
+
+[light]
+capslock = { pin = "P0_06", low_active = true }
+
 
 [storage]
 clear_storage = true
@@ -70,7 +75,7 @@ clear_storage = true
 # See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "100ms", hold_timeout = "200ms" }
+tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 
@@ -221,45 +226,6 @@ combos = [
         "MT(H, RCtrl)",
     ], output = "Right", layer = 0 },
 ]
-
-# combos = [
-# { actions = ["D", "L", "F"], output = "Escape", layer = 0 },
-# { actions = ["B", "F"], output = "Grave", layer = 0 },
-# { actions = ["W", "M"], output = "Minus", layer = 0 },
-# { actions = ["Dot", "Comma"], output = "Slash", layer = 0},
-# { actions = ["D", "L"], output = "Equal", layer = 0 },
-# { actions = ["P", "O"], output = "Backslash", layer = 0 },
-# { actions = ["O", "U"], output = "LeftBracket", layer = 0 },
-# { actions = ["Comma", "Quote"], output = "RightBracket", layer = 0},
-# { actions = ["V", "G"], output = "Q", layer = 0 },
-# { actions = ["G", "M"], output = "J", layer = 0 },
-# { actions = ["F", "D"], output = "X", layer = 0 },
-# { actions = ["V", "W"], output = "Z", layer = 0 },
-# { actions = ["U", "Y"], output = "K", layer = 0 },
-
-# { actions = ["S", "T", "R"], output = "OSL(3)", layer = 0 },
-# { actions = ["R", "N"], output = "CapsLock", layer = 0 },
-# { actions = ["C", "S"], output = "Tab", layer = 0 },
-# { actions = ["I", "H"], output = "Semicolon", layer = 0 },
-# { actions = ["B", "C"], output = "Kc1", layer = 0 },
-# { actions = ["F", "S"], output = "Kc2", layer = 0 },
-# { actions = ["D", "T"], output = "Kc3", layer = 0 },
-# { actions = ["L", "R"], output = "Kc4", layer = 0 },
-# { actions = ["LT(2, Backspace)", "LT(1, Space)"], output = "Kc5", layer = 0 },
-# { actions = ["E", "Enter"], output = "Kc6", layer = 0 },
-# { actions = ["P", "N"], output = "Kc7", layer = 0 },
-# { actions = ["O", "A"], output = "Kc8", layer = 0 },
-# { actions = ["U", "I"], output = "Kc9", layer = 0 },
-# { actions = ["Y", "H"], output = "Kc0", layer = 0 },
-# { actions = ["V", "C"], output = "WM(Z, LGui)", layer = 0 },
-# { actions = ["G", "S"], output = "WM(X, LGui)", layer = 0 },
-# { actions = ["M", "T"], output = "WM(C, LGui)", layer = 0 },
-# { actions = ["W", "R"], output = "WM(V, LGui)", layer = 0 },
-# { actions = ["Dot", "N"], output = "Left", layer = 0 },
-# { actions = ["Comma", "A"], output = "Down", layer = 0 },
-# { actions = ["Quote", "I"], output = "UP", layer = 0 },
-# { actions = ["K", "H"], output = "Right", layer = 0 }
-# ]
 
 
 [rmk]
