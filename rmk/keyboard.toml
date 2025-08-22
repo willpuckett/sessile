@@ -68,14 +68,13 @@ enabled = true
 [light]
 capslock = { pin = "P0_06", low_active = true }
 
-
 [storage]
 clear_storage = true
 
 # See https://rmk.rs/docs/features/configuration/behavior
 [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, permissive_hold = true, chordal_hold = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
+tap_hold = { enable_hrm = true, permissive_hold = true, unilateral_tap = true, hold_on_other_press = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 
@@ -98,10 +97,6 @@ combos = [
         "MT(R, LShift)",
     ], output = "OSL(3)", layer = 0 },
     { actions = [
-        "B",
-        "F",
-    ], output = "Grave", layer = 0 },
-    { actions = [
         "MT(C, LCtrl)",
         "MT(S, LAlt)",
     ], output = "Tab", layer = 0 },
@@ -114,20 +109,16 @@ combos = [
         "Comma",
     ], output = "Slash", layer = 0 },
     { actions = [
-        "MT(I, RAlt)",
-        "MT(H, RCtrl)",
+        "Quote",
+        "OSM(LShift)",
     ], output = "Semicolon", layer = 0 },
-    { actions = [
-        "D",
-        "L",
-    ], output = "Equal", layer = 0 },
     { actions = [
         "P",
         "O",
     ], output = "Backslash", layer = 0 },
     { actions = [
-        "O",
-        "U",
+        "Dot",
+        "OSM(LShift)",
     ], output = "LeftBracket", layer = 0 },
     { actions = [
         "Comma",
@@ -141,10 +132,6 @@ combos = [
         "G",
         "M",
     ], output = "J", layer = 0 },
-    { actions = [
-        "F",
-        "D",
-    ], output = "X", layer = 0 },
     { actions = [
         "V",
         "W",
@@ -225,6 +212,22 @@ combos = [
         "K",
         "MT(H, RCtrl)",
     ], output = "Right", layer = 0 },
+    { actions = [
+        "B",
+        "F",
+    ], output = "W", layer = 0 },
+    { actions = [
+        "F",
+        "D",
+    ], output = "M", layer = 0 },
+    { actions = [
+        "D",
+        "L",
+    ], output = "G", layer = 0 },
+    { actions = [
+        "B",
+        "D",
+    ], output = "X", layer = 0 },
 ]
 
 
