@@ -19,10 +19,10 @@ rows = 7
 cols = 4
 layers = 4
 matrix_map = """
-(0,0) (0,1) (0,2) (0,3) (1,0) (1,1) (1,2) (1,3)
-(2,0) (2,1) (2,2) (2,3) (3,0) (3,1) (3,2) (3,3)
-(4,0) (4,1) (4,2) (4,3) (5,0) (5,1) (5,2) (5,3)
-            (6,0) (6,1) (6,2) (6,3)
+(0,0, L) (0,1, L) (0,2, L) (0,3, L) (1,0, R) (1,1, R) (1,2, R) (1,3, R)
+(2,0, L) (2,1, L) (2,2, L) (2,3, L) (3,0, R) (3,1, R) (3,2, R) (3,3, R)
+(4,0, L) (4,1, L) (4,2, L) (4,3, L) (5,0, R) (5,1, R) (5,2, R) (5,3, R)
+                  (6,0, L) (6,1, L) (6,2, R) (6,3, R)
 """
 
 [[layer]]
@@ -72,11 +72,15 @@ capslock = { pin = "P0_06", low_active = true }
 clear_storage = true
 
 # See https://rmk.rs/docs/features/configuration/behavior
-[behavior]
+# [behavior]
 # Enable HRM 
-tap_hold = { enable_hrm = true, permissive_hold = true, unilateral_tap = true, hold_on_other_press = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
+# tap_hold = { enable_hrm = true, permissive_hold = true, unilateral_tap = true, hold_on_other_press = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
 # # Disable HRM, you can safely ignore any fields if you don't want to change them
 # # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
+[behavior.morse]
+enable_flow_tap = true
+unilateral_tap = true
+permissive_hold = true
 
 [behavior.combo]
 timeout = "25ms"
@@ -215,19 +219,15 @@ combos = [
     { actions = [
         "B",
         "F",
-    ], output = "W", layer = 0 },
+    ], output = "Grave", layer = 0 },
     { actions = [
         "F",
         "D",
-    ], output = "M", layer = 0 },
+    ], output = "X", layer = 0 },
     { actions = [
         "D",
         "L",
-    ], output = "G", layer = 0 },
-    { actions = [
-        "B",
-        "D",
-    ], output = "X", layer = 0 },
+    ], output = "=", layer = 0 }
 ]
 
 
