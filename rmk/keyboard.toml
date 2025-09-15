@@ -112,20 +112,22 @@ combos = [
         "Comma",
     ], output = "Slash", layer = 0 },
     { actions = [
-        "Quote",
-        "OSM(LShift)",
+        "MT(H, RCtrl)",
+        "MT(I, RAlt)",
+        # "Quote",
+        # "OSM(LShift)",
     ], output = "Semicolon", layer = 0 },
     { actions = [
         "P",
         "O",
     ], output = "Backslash", layer = 0 },
     { actions = [
-        "Dot",
-        "OSM(LShift)",
-    ], output = "LeftBracket", layer = 0 },
-    { actions = [
         "Comma",
         "Quote",
+    ], output = "LeftBracket", layer = 0 },
+    { actions = [
+        "Dot",
+        "OSM(LShift)",
     ], output = "RightBracket", layer = 0 },
     { actions = [
         "V",
