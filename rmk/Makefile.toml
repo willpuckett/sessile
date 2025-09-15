@@ -20,7 +20,7 @@ command = "cargo"
 args = ["objcopy", "--release", "--", "-O", "ihex", "sessile.hex"]
 dependencies = ["build"]
 
-[tasks.uf2]
+[tasks.hex-to-uf2]
 install_crate = { crate_name = "cargo-hex-to-uf2", binary = "cargo", test_arg = [
     "hex-to-uf2",
     "--help",
@@ -36,3 +36,8 @@ args = [
     "nrf52840",
 ]
 dependencies = ["objcopy"]
+
+[tasks.uf2]
+command = "rm"
+args = ["sessile.hex"]
+dependencies = ["hex-to-uf2"]

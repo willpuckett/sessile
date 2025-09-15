@@ -75,12 +75,11 @@ clear_storage = true
 # [behavior]
 # Enable HRM 
 # tap_hold = { enable_hrm = true, permissive_hold = true, unilateral_tap = true, hold_on_other_press = true, prior_idle_time = "150ms", hold_timeout = "200ms" }
-# # Disable HRM, you can safely ignore any fields if you don't want to change them
-# # tap_hold = { enable_hrm = false, hold_timeout = "200ms" }
 [behavior.morse]
 enable_flow_tap = true
 unilateral_tap = true
 permissive_hold = true
+hold_timeout = "200ms"
 
 [behavior.combo]
 timeout = "25ms"
