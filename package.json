@@ -9,8 +9,8 @@
     "dev": "board/build.sh",
     "lcscpart": "easyeda2kicad --full --lcsc_id=C2889988 --output board/sessile",
     "ergogenpart": "npx kicad-to-ergogen footprint board/sessile.pretty/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.kicad_mod --output ../sessile/board/footprints/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.js",
-    "buildrmkclean": "cd rmk && cargo clean && cargo build --release && cargo make uf2 --release",
-    "buildrmk": "cd rmk && cargo build --release && cargo make uf2 --release",
+    "buildrmkclean": "cd rmk && cargo clean && cargo make uf2 --release",
+    "buildrmk": "cd rmk && cargo make uf2 --release",
     "erasexiao": "probe-rs erase --chip nrf52840_xxAA",
     "flashsoftdevice": "probe-rs download --verify --binary-format hex --chip nRF52840_xxAA rmk/s140_nrf52_7.3.0_softdevice.hex",
     "flashbootloader": "sudo openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c init -c \"reset init\" -c halt -c \"nrf5 mass_erase\" -c \"program rmk/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify\" -c reset -c exit"
