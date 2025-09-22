@@ -69,7 +69,7 @@ enabled = true
 capslock = { pin = "P0_06", low_active = true }
 
 [storage]
-# clear_storage = true
+clear_storage = false
 
 # See https://rmk.rs/docs/features/configuration/behavior
 # [behavior]
@@ -81,6 +81,12 @@ unilateral_tap = true
 permissive_hold = true
 hold_timeout = "200ms"
 prior_idle_time = "150ms"
+
+[[behavior.macro.macros]]
+operations = [
+    { operation = "text", text = "=>" }
+]
+
 
 [behavior.combo]
 timeout = "25ms"
@@ -115,12 +121,12 @@ combos = [
     { actions = [
         "MT(H, RCtrl)",
         "MT(I, RAlt)",
-        # "Quote",
-        # "OSM(LShift)",
     ], output = "Semicolon", layer = 0 },
     { actions = [
-        "P",
-        "O",
+        "Quote",
+        "OSM(LShift)",
+        # "P",
+        # "O",
     ], output = "Backslash", layer = 0 },
     { actions = [
         "Comma",
@@ -229,7 +235,22 @@ combos = [
     { actions = [
         "D",
         "L",
-    ], output = "=", layer = 0 }
+    ], output = "=", layer = 0 },
+    # { actions = [
+    #     "Comma",
+    #     "Quote",
+    #     "OSM(LShift)",
+    # ], output = "Macro0", layer = 0 },
+    { actions = [
+        "Comma",
+        "OSM(LShift)",
+    ], output = "SHIFTED(9)", layer = 0 },
+    { actions = [
+        "Dot",
+        "Quote",
+    ], output = "SHIFTED(0)", layer = 0 },
+    
+    
 ]
 
 
