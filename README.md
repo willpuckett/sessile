@@ -33,12 +33,11 @@ I wasn't quite ready to take on learning to type on that though, so just avoidin
 
 - The high speed pins were left available for encoders and *could* be wired in a subsequent revision.
 
-- Built with RMK. ~~Combos soon to follow upon upstream merge.~~ Combos are here! But only 8 of them at a time. Configure them in [Vial](https://get.vial.today).
+- Built for RMK. Configure them using [Vial](https://get.vial.today).
 
 ## Production Files
 
-You can find the gerbers, bom, and cpl for JLC [here](board/output/pcbs/jlcpcb/production_files/). Finished boards are available [here](https://octule.com/listing/1842172090/sessile)
-
+You can find the gerbers, bom, and cpl for JLC [here](board/output/pcbs/jlcpcb/production_files/). Finished boards are ~~available~~ [sold out](https://octule.com/listing/1842172090/sessile) till the next batch.
 
 ## Origin
 
@@ -48,24 +47,37 @@ You can find the gerbers, bom, and cpl for JLC [here](board/output/pcbs/jlcpcb/p
 
 ## Firmware
 
-This board is punk rock and is designed for RMK. 😏
-
-Using a dongle will greatly increase battery life.
+This board is designed for RMK. 😏
 
 ### RMK
 
-RMK can be configured for dongle mode but currently only has pre-built firmware in [central mode](rmk/sessile.uf2).
+Current RMK build is available in the [Releases](https://github.com/willpuckett/sessile/releases/latest). 
 
+You can build the firmware yourself by cloning this repository and running
 
-RMK can be configured via [Vial](https://get.vial.today). If you intend to use vial, you need to change the following line in `keyboard.toml` and rebuild the firmware.
+```bash
+cd rmk && cargo make uf2 --release
+```
 
-```diff
-[storage]
-- clear_storage = true
-+ clear_storage = false
-``` 
+(If you haven't previously used Rust to build software for nRF52840, you may need to follow the [Setup RMK Environment](https://rmk.rs/docs/user_guide/2-2_local_compilation.html#setup-rmk-environment) instructions.)
+
 
 ### ZMK
+
+There is a no longer maintained build of ZMK available in the ZMK branch. 
+
+> [!IMPORTANT] 
+> RMK uses a newer SoftDevice. Once you flash the current version of RMK, you won't be able to reflash ZMK without connecting a debug device and doing something akin to:
+
+```bash
+wget https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/softdevices/s140/s140_nrf52_7.3.0.zip
+wget https://forum.seeedstudio.com/uploads/short-url/eSDX0bezkia89iZ77eduYRwycAt.zip
+unzip s140_nrf52_7.3.0.zip 
+unzip eSDX0bezkia89iZ77eduYRwycAt.zip
+probe-rs erase --chip nrf52840_xxAA # erasexiao
+probe-rs download --verify --binary-format hex --chip nRF52840_xxAA s140_nrf52_7.3.0_softdevice.hex # flashsoftdevice
+sudo openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c init -c \"reset init\" -c halt -c \"nrf5 mass_erase\" -c \"program Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify\" -c reset -c exit # flashbootloader
+```
 
 >  [!IMPORTANT]
 >  If you are still using [sessile-template](https://github.com/willpuckett/sessile-template/) to build zmk, you need to change [west.yml](https://github.com/willpuckett/sessile-template/blob/main/config/west.yml) to point to zmk branch of this repo.
@@ -92,7 +104,6 @@ manifest:
   self:
     path: config
 ```
-
 
 ## Keymap
 
