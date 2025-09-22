@@ -4,10 +4,32 @@ on:
   push:
     paths:
       - "rmk/**"
-
+      - ".github/workflows/rmk.yml"
+# env:
+#   LIBSSL: "libssl1.1_1.1.1f-1ubuntu2_amd64.deb"
 jobs:
   build:
-    uses: haobogu/rmk/.github/workflows/user_build.yml@main
-    with:
-      keyboard_toml_path: "rmk/keyboard.toml"
-      vial_json_path: "rmk/vial.json"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cargo-bins/cargo-binstall@main
+      - uses: actions/checkout@v4
+      # - uses: actions/cache@v4
+        # with:
+        #   path: |
+        #     libssl*.deb
+        #   key: ${{ runner.os }}-libssl
+      # - name: Install libssl
+      #   run: |
+      #     [ ! -f $LIBSSL ] && wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/$LIBSSL
+      #     sudo dpkg -i $LIBSSL
+      - name: Install flip-link and cargo-make
+        run: cargo binstall cargo-make flip-link -y
+      - name: Build uf2 firmware
+        working-directory: ./rmk
+        run: cargo make uf2 --release
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware_uf2
+          path: rmk/*.uf2
+
