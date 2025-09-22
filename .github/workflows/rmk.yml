@@ -11,6 +11,16 @@ jobs:
     steps:
       - uses: cargo-bins/cargo-binstall@main
       - uses: actions/checkout@v4
+      - name: Cache cargo registry and build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rmk/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('rmk/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
       - name: Install flip-link and cargo-make
         run: cargo binstall cargo-make flip-link -y
       - name: Install Rust toolchain
