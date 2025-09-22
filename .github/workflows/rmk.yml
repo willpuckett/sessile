@@ -24,6 +24,8 @@ jobs:
       #     sudo dpkg -i $LIBSSL
       - name: Install flip-link and cargo-make
         run: cargo binstall cargo-make flip-link -y
+      - name: Install Rust toolchain
+        run: rustup target add thumbv7em-none-eabihf
       - name: Build uf2 firmware
         working-directory: ./rmk
         run: cargo make uf2 --release
