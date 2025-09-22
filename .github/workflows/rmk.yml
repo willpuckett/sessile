@@ -45,8 +45,7 @@ jobs:
     needs: build
     steps:
       - uses: actions/download-artifact@v5
-      - run: ls -R
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: firmware/*.uf2
+          files: "*.uf2"
