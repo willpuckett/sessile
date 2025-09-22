@@ -388,7 +388,7 @@ pcbs:
 #     - name: panel
 #       operation: add
 #       extrude: 1
-#     - name: switches
+#     - name: _switches
 #       operation: subtract
 #       extrude: 1
 
