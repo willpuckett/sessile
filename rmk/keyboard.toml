@@ -85,8 +85,7 @@ prior_idle_time = "150ms"
 [[behavior.macro.macros]]
 operations = [
     { operation = "text", text = "=>" }
-]
-
+] 
 
 [behavior.combo]
 timeout = "25ms"
@@ -98,13 +97,31 @@ combos = [
         "F",
     ], output = "Escape", layer = 0 },
     { actions = [
+        "MT(C, LCtrl)",
+        "MT(H, RCtrl)",
+    ], output = "CapsLock", layer = 0 },
+    { actions = [
         "MT(R, LShift)",
         "MT(N, RShift)",
-    ], output = "CapsLock", layer = 0 },
+    ], output = "CapsWordToggle", layer = 0 },
+    { actions = [
+        "MT(C, LCtrl)",
+        "MT(R, LShift)",
+    ], output = "OSM(LShift)", layer = 0 },
+    { actions = [
+        "MT(H, RCtrl)",
+        "MT(N, RShift)",
+    ], output = "OSM(LShift)", layer = 0 },
+
     { actions = [
         "MT(S, LAlt)",
         "MT(T, LGui)",
         "MT(R, LShift)",
+    ], output = "OSL(3)", layer = 0 },
+    { actions = [
+        "MT(I, RAlt)",
+        "MT(A, RGui)",
+        "MT(N, RShift)",
     ], output = "OSL(3)", layer = 0 },
     { actions = [
         "MT(C, LCtrl)",
@@ -123,19 +140,9 @@ combos = [
         "MT(I, RAlt)",
     ], output = "Semicolon", layer = 0 },
     { actions = [
-        "Quote",
-        "OSM(LShift)",
-        # "P",
-        # "O",
+        "P",
+        "O",
     ], output = "Backslash", layer = 0 },
-    { actions = [
-        "Comma",
-        "Quote",
-    ], output = "LeftBracket", layer = 0 },
-    { actions = [
-        "Dot",
-        "OSM(LShift)",
-    ], output = "RightBracket", layer = 0 },
     { actions = [
         "V",
         "G",
@@ -242,15 +249,38 @@ combos = [
     #     "OSM(LShift)",
     # ], output = "Macro0", layer = 0 },
     { actions = [
+        "O",
+        "U",
+    ], output = "LeftBracket", layer = 0 },
+    { actions = [
+        "P",
+        "Y",
+    ], output = "RightBracket", layer = 0 },
+    { actions = [
+        "Y",
+        "O",
+    ], output = "SHIFTED(9)", layer = 0 },
+    { actions = [
+        "U",
+        "P",
+    ], output = "SHIFTED(0)", layer = 0 },
+    { actions = [
+        "Comma",
+        "Quote",
+    ], output = "SHIFTED(LeftBracket)", layer = 0 },
+    { actions = [
+        "Dot",
+        "OSM(LShift)",
+    ], output = "SHIFTED(RightBracket)", layer = 0 },
+    { actions = [
         "Comma",
         "OSM(LShift)",
-    ], output = "SHIFTED(9)", layer = 0 },
+    ], output = "SHIFTED(Comma)", layer = 0 },
     { actions = [
         "Dot",
         "Quote",
-    ], output = "SHIFTED(0)", layer = 0 },
-    
-    
+    ], output = "SHIFTED(Dot)", layer = 0 },
+
 ]
 
 
