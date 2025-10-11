@@ -1,0 +1,8 @@
+{
+    "servers": {
+        "rmk Docs": {
+            "type": "sse",
+            "url": "https://gitmcp.io/HaoboGu/rmk"
+        }
+    }
+}

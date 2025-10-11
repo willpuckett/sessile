@@ -30,7 +30,7 @@ name = "caster"
 keys = """
 B F D L P O U Y
 MT(C, LCtrl) MT(S, LAlt) MT(T, LGui) MT(R, LShift) MT(N, RShift) MT(A, RGui) MT(I, RAlt) MT(H, RCtrl)
-V G M W Dot Comma Quote OSM(LShift)
+V G M W Dot Comma Quote K
 LT(2, Backspace) LT(1, Space) E Enter
 """
 
@@ -63,9 +63,15 @@ LT(2, Enter) LT(1, E) Space Backspace
 
 [ble]
 enabled = true
-# battery_adc_pin = "vddh"
+battery_adc_pin = "P0_31"
+adc_divider_measured = 510
+adc_divider_total = 1510
 
 [light]
+# P0_17 CHG (active high)
+# P0_26 RED LED
+# P0_30 GREEN LED
+# PO_06 BLUE LED
 capslock = { pin = "P0_06", low_active = true }
 
 [storage]
@@ -92,9 +98,11 @@ timeout = "25ms"
 combos = [
     # Press J and K keys simultaneously to output Escape key
     { actions = [
-        "D",
-        "L",
-        "F",
+        # "D",
+        # "L",
+        # "F",
+        "MT(S, LAlt)",
+        "MT(T, LGui)",
     ], output = "Escape", layer = 0 },
     { actions = [
         "MT(C, LCtrl)",
@@ -105,11 +113,11 @@ combos = [
         "MT(N, RShift)",
     ], output = "CapsWordToggle", layer = 0 },
     { actions = [
-        "MT(C, LCtrl)",
+        "MT(S, LAlt)",
         "MT(R, LShift)",
     ], output = "OSM(LShift)", layer = 0 },
     { actions = [
-        "MT(H, RCtrl)",
+        "MT(I, RAlt)",
         "MT(N, RShift)",
     ], output = "OSM(LShift)", layer = 0 },
 
@@ -130,11 +138,11 @@ combos = [
     { actions = [
         "W",
         "M",
-    ], output = "Minus", layer = 0 },
+    ], output = "Minus"},
     { actions = [
         "Dot",
         "Comma",
-    ], output = "Slash", layer = 0 },
+    ], output = "Slash"},
     { actions = [
         "MT(H, RCtrl)",
         "MT(I, RAlt)",
@@ -242,11 +250,11 @@ combos = [
     { actions = [
         "D",
         "L",
-    ], output = "=", layer = 0 },
+    ], output = "="},
     # { actions = [
     #     "Comma",
     #     "Quote",
-    #     "OSM(LShift)",
+    #     "K",
     # ], output = "Macro0", layer = 0 },
     { actions = [
         "O",
@@ -270,11 +278,11 @@ combos = [
     ], output = "SHIFTED(LeftBracket)", layer = 0 },
     { actions = [
         "Dot",
-        "OSM(LShift)",
+        "K",
     ], output = "SHIFTED(RightBracket)", layer = 0 },
     { actions = [
         "Comma",
-        "OSM(LShift)",
+        "K",
     ], output = "SHIFTED(Comma)", layer = 0 },
     { actions = [
         "Dot",
