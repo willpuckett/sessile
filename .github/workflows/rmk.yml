@@ -22,7 +22,7 @@ jobs:
             rmk/target
           key: ${{ runner.os }}-cargo-${{ hashFiles('rmk/Cargo.lock') }}
           restore-keys: |
-            ${{ runner.os }}-cargo-
+            ${{ runner.os }}-cargo-${{ hashFiles('rmk/Cargo.lock') }}
       - name: Install flip-link, cargo-make, and cargo-binutils
         if: steps.cargo-cache.outputs.cache-hit != 'true'
         run: cargo binstall cargo-make cargo-hex-to-uf2 flip-link cargo-binutils -y
