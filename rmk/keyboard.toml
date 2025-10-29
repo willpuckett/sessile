@@ -73,6 +73,7 @@ adc_divider_total = 1510
 # P0_30 GREEN LED
 # PO_06 BLUE LED
 capslock = { pin = "P0_06", low_active = true }
+scrolllock = { pin = "P0_14", low_active = false }
 
 [storage]
 clear_storage = false
