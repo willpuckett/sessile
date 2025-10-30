@@ -133,7 +133,11 @@ Thanks to the miraculous [caksoylar](https://github.com/caksoylar) for
 [keymap-drawer](https://github.com/caksoylar/keymap-drawer/tree/main) which
 generates this map.
 
+<div style="text-align: center;">
+    
 ![Caster Befuddle Variant](.images/keymap.svg)
+
+</div>
 
 ## 🔌 Matrix Diagram
 
