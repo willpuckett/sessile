@@ -379,8 +379,12 @@ parse_config:
     
     # Enhanced media keys with better icons
     C_PP: $$mdi:play-pause$$
+    MediaPlayPause: $$mdi:play-pause$$
     C_NEXT: $$mdi:skip-next$$
+    MediaNextTrack: $$mdi:skip-next$$
     C_PREV: $$mdi:skip-previous$$
+    MediaPrevTrack: $$mdi:skip-previous$$
+    MediaEject: $$mdi:eject$$
     MUTE: $$mdi:volume-off$$
     VOL_UP: $$mdi:volume-high$$
     VOL_DN: $$mdi:volume-low$$

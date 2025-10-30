@@ -42,7 +42,7 @@ __ __ __ __
 [[layer]]
 name = "function"
 keys = """
-F12 F7 F8 F9 __ __ __ Bootloader
+F12 F7 F8 F9 MediaPrevTrack MediaPlayPause MediaNextTrack MediaEject
 F11 F4 F5 F6 __ __ __ __
 F10 F1 F2 F3 __ __ __ __
 __ __ __ __
@@ -82,18 +82,12 @@ hold_timeout = "200ms"
 prior_idle_time = "150ms"
 
 [[behavior.macro.macros]]
-operations = [
-    { operation = "text", text = "=>" }
-] 
+operations = [{ operation = "text", text = "=>" }]
 
 [behavior.combo]
 timeout = "25ms"
 combos = [
-    # Press J and K keys simultaneously to output Escape key
     { actions = [
-        # "D",
-        # "L",
-        # "F",
         "MT(S, LAlt)",
         "MT(T, LGui)",
     ], output = "Esc", layer = 0 },
@@ -131,11 +125,11 @@ combos = [
     { actions = [
         "W",
         "M",
-    ], output = "-"},
+    ], output = "-" },
     { actions = [
         "Dot",
         "Comma",
-    ], output = "/"},
+    ], output = "/" },
     { actions = [
         "MT(H, RCtrl)",
         "MT(I, RAlt)",
@@ -239,7 +233,7 @@ combos = [
     { actions = [
         "D",
         "L",
-    ], output = "="},
+    ], output = "=" },
     # { actions = [
     #     "Comma",
     #     "Quote",
@@ -277,6 +271,10 @@ combos = [
         "Dot",
         "Quote",
     ], output = "SHIFTED(Dot)", layer = 0 },
+    { actions = [
+        "U",
+        "Y",
+    ], output = "Bootloader", layer = 2 },
 
 ]
 
