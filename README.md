@@ -82,7 +82,7 @@ cd rmk && cargo make uf2 --release
 
 There is a **no longer maintained** build of ZMK available in the ZMK branch.
 
-> [!IMPORTANT]
+> [!CAUTION]
 > RMK uses a newer SoftDevice. Once you flash the current version of RMK, you
 > won't be able to reflash ZMK without connecting a debug device and doing
 > something akin to:

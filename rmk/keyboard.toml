@@ -42,7 +42,7 @@ __ __ __ __
 [[layer]]
 name = "function"
 keys = """
-F12 F7 F8 F9 __ __ __ __
+F12 F7 F8 F9 __ __ __ Bootloader
 F11 F4 F5 F6 __ __ __ __
 F10 F1 F2 F3 __ __ __ __
 __ __ __ __
@@ -96,11 +96,7 @@ combos = [
         # "F",
         "MT(S, LAlt)",
         "MT(T, LGui)",
-    ], output = "Escape", layer = 0 },
-    { actions = [
-        "MT(C, LCtrl)",
-        "MT(H, RCtrl)",
-    ], output = "CapsLock", layer = 0 },
+    ], output = "Esc", layer = 0 },
     { actions = [
         "MT(R, LShift)",
         "MT(N, RShift)",
@@ -112,7 +108,11 @@ combos = [
     { actions = [
         "MT(I, RAlt)",
         "MT(N, RShift)",
-    ], output = "OSM(LShift)", layer = 0 },
+    ], output = "OSM(RShift)", layer = 0 },
+    { actions = [
+        "MT(C, LCtrl)",
+        "MT(H, RCtrl)",
+    ], output = "CapsLock", layer = 0 },
 
     { actions = [
         "MT(S, LAlt)",
@@ -131,19 +131,19 @@ combos = [
     { actions = [
         "W",
         "M",
-    ], output = "Minus"},
+    ], output = "-"},
     { actions = [
         "Dot",
         "Comma",
-    ], output = "Slash"},
+    ], output = "/"},
     { actions = [
         "MT(H, RCtrl)",
         "MT(I, RAlt)",
-    ], output = "Semicolon", layer = 0 },
+    ], output = ";", layer = 0 },
     { actions = [
         "P",
         "O",
-    ], output = "Backslash", layer = 0 },
+    ], output = "\\", layer = 0 },
     { actions = [
         "V",
         "G",
@@ -157,49 +157,45 @@ combos = [
         "W",
     ], output = "Z", layer = 0 },
     { actions = [
-        "U",
-        "Y",
-    ], output = "K", layer = 0 },
-    { actions = [
         "B",
         "MT(C, LCtrl)",
-    ], output = "Kc1", layer = 0 },
+    ], output = "1", layer = 0 },
     { actions = [
         "F",
         "MT(S, LAlt)",
-    ], output = "Kc2", layer = 0 },
+    ], output = "2", layer = 0 },
     { actions = [
         "D",
         "MT(T, LGui)",
-    ], output = "Kc3", layer = 0 },
+    ], output = "3", layer = 0 },
     { actions = [
         "L",
         "MT(R, LShift)",
-    ], output = "Kc4", layer = 0 },
+    ], output = "4", layer = 0 },
     { actions = [
         "LT(2, Backspace)",
         "LT(1, Space)",
-    ], output = "Kc5", layer = 0 },
+    ], output = "5", layer = 0 },
     { actions = [
         "E",
         "Enter",
-    ], output = "Kc6", layer = 0 },
+    ], output = "6", layer = 0 },
     { actions = [
         "P",
         "MT(N, RShift)",
-    ], output = "Kc7", layer = 0 },
+    ], output = "7", layer = 0 },
     { actions = [
         "O",
         "MT(A, RGui)",
-    ], output = "Kc8", layer = 0 },
+    ], output = "8", layer = 0 },
     { actions = [
         "U",
         "MT(I, RAlt)",
-    ], output = "Kc9", layer = 0 },
+    ], output = "9", layer = 0 },
     { actions = [
         "Y",
         "MT(H, RCtrl)",
-    ], output = "Kc0", layer = 0 },
+    ], output = "0", layer = 0 },
     { actions = [
         "V",
         "MT(C, LCtrl)",
