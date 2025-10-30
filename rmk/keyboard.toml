@@ -25,7 +25,7 @@ matrix_map = """
 name = "caster"
 keys = """
 B F D L P O U Y
-MT(C, LCtrl) MT(S, LAlt) MT(T, LGui) MT(R, LShift) MT(N, RShift) MT(A, RGui) MT(I, RAlt) MT(H, RCtrl)
+MT(C, LCtrl) MT(S, LAlt) MT(T, LGui) MT(R, LShift) MT(N, RShift) MT(A, RGui) MT(I, RAlt) MT(H, LCtrl)
 V G M W Dot Comma Quote K
 LT(2, Backspace) LT(1, Space) E Enter
 """
@@ -52,7 +52,7 @@ __ __ __ __
 name = "upsidedown"
 keys = """
 Y U O P L D F B
-MT(H, LCtrl) MT(I, LAlt) MT(A, LGui) MT(N, LShift) MT(R, RShift) MT(T, RGui) MT(S, RAlt) MT(C, RCtrl)
+MT(H, LCtrl) MT(I, LAlt) MT(A, LGui) MT(N, LShift) MT(R, RShift) MT(T, RGui) MT(S, RAlt) MT(C, LCtrl)
 K Quote Comma Dot W M G V
 LT(2, Enter) LT(1, E) Space Backspace
 """
@@ -105,7 +105,7 @@ combos = [
     ], output = "OSM(RShift)", layer = 0 },
     { actions = [
         "MT(C, LCtrl)",
-        "MT(H, RCtrl)",
+        "MT(H, LCtrl)",
     ], output = "CapsLock", layer = 0 },
 
     { actions = [
@@ -131,7 +131,7 @@ combos = [
         "Comma",
     ], output = "/" },
     { actions = [
-        "MT(H, RCtrl)",
+        "MT(H, LCtrl)",
         "MT(I, RAlt)",
     ], output = ";", layer = 0 },
     { actions = [
@@ -188,7 +188,7 @@ combos = [
     ], output = "9", layer = 0 },
     { actions = [
         "Y",
-        "MT(H, RCtrl)",
+        "MT(H, LCtrl)",
     ], output = "0", layer = 0 },
     { actions = [
         "V",
@@ -220,7 +220,7 @@ combos = [
     ], output = "UP", layer = 0 },
     { actions = [
         "K",
-        "MT(H, RCtrl)",
+        "MT(H, LCtrl)",
     ], output = "Right", layer = 0 },
     { actions = [
         "B",
