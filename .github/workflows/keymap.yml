@@ -6,7 +6,7 @@ on:
     tags:
       - "v*.*.*"
     paths:
-      - ".images/kd_config.yml"
+      - ".images/config.yml"
       - ".github/workflows/keymap.yml"
   workflow_run:
     workflows: ["Build RMK firmware"]
