@@ -45,7 +45,7 @@ keys = """
 F12 F7 F8 F9 MediaPrevTrack MediaPlayPause MediaNextTrack MediaEject
 F11 F4 F5 F6 __ __ __ __
 F10 F1 F2 F3 __ __ __ __
-__ __ __ __
+__ __ __ Bootloader
 """
 
 [[layer]]
@@ -271,11 +271,6 @@ combos = [
         "Dot",
         "Quote",
     ], output = "SHIFTED(Dot)", layer = 0 },
-    { actions = [
-        "U",
-        "Y",
-    ], output = "Bootloader", layer = 2 },
-
 ]
 
 
