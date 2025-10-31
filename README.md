@@ -33,7 +33,7 @@ avoiding lateral reaches seemed like a start. 🙃
 
 ## ✨ Features
 
-- 🧩 Sessile uses KLP-Lame keycaps. Larger caps may be tight, especially on the
+- 🧩 Sessile uses [KLP-Lame keycaps](https://github.com/braindefender/KLP-Lame-Keycaps). Larger caps may be tight, especially on the
   bottom row. I was lazy and didn't model the tilted keycaps in the rendering,
   but they're much nicer for the vertical combos.
 
@@ -41,6 +41,8 @@ avoiding lateral reaches seemed like a start. 🙃
 
 - 🔌 The high speed pins were left available for encoders and _could_ be wired
   in a subsequent revision.
+
+- 🐣 Designed to sit as low as possible. Use a stroke of gluestick under the case to keep in place.
 
 - ⚙️ Built for RMK. Configure using [Vial](https://get.vial.today).
 
@@ -73,20 +75,23 @@ You can build the firmware yourself by cloning this repository and running
 cd rmk && cargo make uf2 --release
 ```
 
-> [!TIP] If you haven't previously used Rust to build software for nRF52840, you
-> may need to follow the
+> [!TIP]
+> If you haven't previously used Rust to build software for nRF52840, you may
+> need to follow the
 > [Setup RMK Environment](https://rmk.rs/guide/user_guide/2-2_local_compilation#setup-rmk-environment)
 > instructions.
 
 ## 🗺️ Keymap
 
-<div style="text-align: center;">
+<div align="center">
 
 ![Caster Befuddle Variant](.images/keymap.svg)
 
-Generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer/tree/main). 
+Generated with
+[keymap-drawer](https://github.com/caksoylar/keymap-drawer/tree/main).
 
-Physical layout imported from KiCad via [keymap-layout-tools](https://nickcoutsos.github.io/keymap-layout-tools/).
+Physical layout imported from KiCad via
+[keymap-layout-tools](https://nickcoutsos.github.io/keymap-layout-tools/).
 
 </div>
 
@@ -96,7 +101,8 @@ Sessile uses the following pinout for its matrix:
 
 ![sessile_matrix](.images/matrix.svg)
 
-> [!NOTE] Referencing
+> [!NOTE]
+> Referencing
 > [this pinout sheet provided by Seeed](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx),
 > the only two exposed high speed pins P0_04/SDA/D4 & P0_05/SCL/D5 have been
 > left available for possible encoders in a subsequent revision.
