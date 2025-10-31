@@ -25,11 +25,11 @@ jobs:
           fetch-depth: 2
           ref: ${{ github.head_ref }}
       - uses: astral-sh/setup-uv@v3
-      - run: |
+      - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
             uvx --from git+https://github.com/willpuckett/keymap-drawer keymap \
                 -c .images/config.yml parse -r rmk/keyboard.toml | \
             uvx --from git+https://github.com/willpuckett/keymap-drawer keymap \
-                draw -j .images/info.json - > .images/keymap.svg
+                draw -j .images/info.json - > .images/keymap.svg 
       - uses: actions/upload-artifact@v4
         with:
           name: keymaps
