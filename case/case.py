@@ -15,7 +15,7 @@
 
 from holes import drill_points, locations
 from build123d import *
-from ocp_vscode import show_object as show
+# from ocp_vscode import show_object as show
 
 # set_port(3939)
 
@@ -69,7 +69,7 @@ with BuildPart() as case:
     # top_face = case.faces().sort_by(Axis.Z)[-1]
     # fillet(top_face.edges(), radius=0.5 * MM)
 
-show(case)
+# show(case)
 export_step(case.part, file_path="case/case.step")
 # export_stl(case.part, file_path="case.stl")
 # export_stl(case.part, file_path="case_ascii.stl", ascii_format=True)

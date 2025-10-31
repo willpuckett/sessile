@@ -10,3 +10,5 @@ node_modules
 outlines
 *.kicad_pcb.lck
 *-backups
+
+__pycache__/
