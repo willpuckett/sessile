@@ -23,13 +23,13 @@ jobs:
       - name: Install dependencies
         run: bun install
         
-      - name: Build board case
-        run: bun run board
+      - name: Build case
+        run: bun run case
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: board-case
+          name: case
           path: board/output/cases/case.stl
 
   release:
