@@ -42,6 +42,7 @@ units:
   xiao_x: 17.8
   xiao_y: 21
   sf: 16
+  case_thickness: 1
 
 points:
   zones.matrix:
@@ -181,6 +182,72 @@ outlines:
         where:
           - /matrix_.*/
           - /thumb_.*/
+    _switch_holes:
+      - what: circle
+        radius: 2.15
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [-5.5, 0]
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [5.5, 0]
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [0, 5.9]
+          resist: true
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [5, 3.8]
+          resist: true
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+    _lir1254_holes:
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [-6.61, -20.45]
+        where: mcu
+      - what: circle
+        radius: 1.5
+        adjust:
+          shift: [6.61, -20.45]
+        where: mcu
+    _xiao_holes:
+      - what: rectangle
+        size: [3, xiao_y - 5]
+        corner: 1
+        adjust:
+          shift: [-7.62, 0]
+        where: mcu
+      - what: rectangle
+        size: [3, xiao_y - 5]
+        corner: 1
+        adjust:
+          shift: [7.62, 0]
+        where: mcu
+    _pw_sw_holes:
+      - what: rectangle
+        size: [8, 12]
+        adjust:
+          shift: [0, 8.7]
+        where: mcu  
     _center:
       - what: rectangle
         where:
@@ -204,6 +271,10 @@ outlines:
     panel:
       - name: _panel
         fillet: 2
+    panel_expanded:
+      - name: _panel
+        fillet: 2
+        expand: 2
     _switches:
       - what: rectangle
         size: 14
@@ -381,14 +452,31 @@ pcbs:
       #- what: mountinghole
       #  where: mounting_hole
 
-# Use this to skip having to go through kicad for prototyping...
-# Doesn't work... Only gets main switch outline
-# cases:
-#   bottom:
-#     - name: panel
-#       operation: add
-#       extrude: 1
-#     - name: _switches
-#       operation: subtract
-#       extrude: 1
+cases:
+  bottom:
+    - what: outline
+      name: panel_expanded
+      extrude: case_thickness * 3
+    - what: outline
+      name: panel
+      operation: subtract
+      extrude: case_thickness * 2
+      shift: [0, 0, case_thickness]
+    - what: outline
+      name: _switch_holes
+      operation: subtract
+      extrude: case_thickness
+    - what: outline
+      name: _lir1254_holes
+      operation: subtract
+      extrude: case_thickness
+    - what: outline
+      name: _xiao_holes
+      operation: subtract
+      extrude: case_thickness  
+    - what: outline
+      name: _pw_sw_holes
+      operation: subtract 
+      shift: [0, 0, case_thickness]   
+      extrude: case_thickness * 2
 

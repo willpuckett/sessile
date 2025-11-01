@@ -1,9 +1,8 @@
 {
   "name": "sessile",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "minimal finger movement",
   "main": "index.js",
-  "pkgx": "npm python@3.12 pipx",
   "scripts": {
     "board": "cd board; ergogen --clean . && [[ -d output/cases ]] && for i in output/cases/*.jscad; do npx @jscad/cli@1 \"$i\" -of stla; rm \"$i\"; done || true",
     "dev": "board/build.sh",
