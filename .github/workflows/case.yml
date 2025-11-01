@@ -1,0 +1,48 @@
+name: Build Board Case
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
+    paths:
+      - "board/**"
+      - ".github/workflows/board.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+          
+      - name: Install dependencies
+        run: bun install
+        
+      - name: Build board case
+        run: bun run board
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: board-case
+          path: board/output/cases/case.stl
+
+  release:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: board-case
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "case.stl"
