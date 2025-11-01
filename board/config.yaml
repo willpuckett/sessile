@@ -453,7 +453,7 @@ pcbs:
       #  where: mounting_hole
 
 cases:
-  bottom:
+  case:
     - what: outline
       name: panel_expanded
       extrude: case_thickness * 3

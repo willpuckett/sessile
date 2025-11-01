@@ -8,7 +8,9 @@ node_modules
 .DS_Store
 
 outlines
+
 *.kicad_pcb.lck
 *-backups
-
-__pycache__/
+fp-info-cache
+fp-lib-table
+*.kicad_prl
