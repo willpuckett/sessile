@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/willpuckett/sessile#readme",
   "dependencies": {
-    "ergogen": "github:ergogen/ergogen#pull/159"
+    "ergogen": "github:willpuckett/ergogen#develop"
   },
   "devDependencies": {
     "@jscad/cli": "^2.3.6"
