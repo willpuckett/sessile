@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "ergogen": "cd board; ergogen --clean .",
-    "convert_case": "[[ -d board/output/cases ]] && for i in board/output/cases/*.jscad; do npx @jscad/cli \"$i\" -of stlb; done || true",
+    "convert_case": "npx jscad board/output/cases/*.jscad -of stlb",
     "case": "npm run ergogen && npm run convert_case",
     "dev": "npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; pcbnew board/output/pcbs/sessile.kicad_pcb & } && fswatch board/config.yaml board/footprints/ | while read; do npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; pcbnew board/output/pcbs/sessile.kicad_pcb & }; done",
     "lcscpart": "easyeda2kicad --full --lcsc_id=C2889988 --output board/sessile",
