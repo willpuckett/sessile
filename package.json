@@ -7,7 +7,7 @@
     "ergogen": "cd board; ergogen --clean .",
     "convert_case": "[[ -d board/output/cases ]] && for i in board/output/cases/*.jscad; do npx @jscad/cli \"$i\" -of stlb; done || true",
     "case": "npm run ergogen && npm run convert_case",
-    "dev": "npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; /Applications/KiCad/KiCad.app/Contents/Applications/pcbnew.app/Contents/MacOS/pcbnew board/output/pcbs/sessile.kicad_pcb & } && fswatch board/config.yaml board/footprints/ | while read; do npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; /Applications/KiCad/KiCad.app/Contents/Applications/pcbnew.app/Contents/MacOS/pcbnew board/output/pcbs/sessile.kicad_pcb & }; done",
+    "dev": "npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; pcbnew board/output/pcbs/sessile.kicad_pcb & } && fswatch board/config.yaml board/footprints/ | while read; do npm run ergogen && { pkill -f 'pcbnew.*sessile.kicad_pcb' || true; rm -rf board/output/pcbs/~sessile.kicad_pcb.lck 2>/dev/null || true; pcbnew board/output/pcbs/sessile.kicad_pcb & }; done",
     "lcscpart": "easyeda2kicad --full --lcsc_id=C2889988 --output board/sessile",
     "ergogenpart": "npx kicad-to-ergogen footprint board/sessile.pretty/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.kicad_mod --output ../sessile/board/footprints/HDR-TH_7P-P2.54-V-F_MF254V-11-07-0743.js",
     "buildrmkclean": "cd rmk && cargo clean && cargo make uf2 --release",
