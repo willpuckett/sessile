@@ -34,16 +34,19 @@ avoiding lateral reaches seemed like a start. 🙃
 
 ## ✨ Features
 
-- 🧩 Sessile uses [KLP-Lame keycaps](https://github.com/braindefender/KLP-Lame-Keycaps). Larger caps may be tight, especially on the
-  bottom row. I was lazy and didn't model the tilted keycaps in the rendering,
-  but they're much nicer for the vertical combos.
+- 🧩 Sessile uses
+  [KLP-Lame keycaps](https://github.com/braindefender/KLP-Lame-Keycaps). Larger
+  caps may be tight, especially on the bottom row. I was lazy and didn't model
+  the tilted keycaps in the rendering, but they're much nicer for the vertical
+  combos.
 
 - 🔋 Uses battery LIR1254. **DO NOT substitute LR44.**
 
 - 🔌 The high speed pins were left available for encoders and _could_ be wired
   in a subsequent revision.
 
-- 🐣 Designed to sit as low as possible. Use a stroke of gluestick under the case to keep in place.
+- 🐣 Designed to sit as low as possible. Use a stroke of gluestick under the
+  case to keep in place.
 
 - ⚙️ Built for RMK. Configure using [Vial](https://get.vial.today).
 
