@@ -1,6 +1,6 @@
 [package]
 name = "sessile"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Will Puckett <willpuckett@gmail.com>"]
 description = "Keyboard firmware written in Rust"
 homepage = "https://github.com/willpuckett/sessile"
