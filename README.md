@@ -3,6 +3,7 @@
 ![sessile render](.images/render.webp)
 
 [![Build RMK firmware](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml)
+[![Build Case](https://github.com/willpuckett/sessile/actions/workflows/case.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/case.yml)
 [![keymap](https://github.com/willpuckett/sessile/actions/workflows/keymap.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/keymap.yml)
 
 _Sessile_ is a further exploration of "minimal" finger travel.
