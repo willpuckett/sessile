@@ -8,7 +8,7 @@ on:
     paths:
       - "board/**"
       - ".github/workflows/board.yml"
-
+      - "package.json"
 jobs:
   build:
     runs-on: ubuntu-latest
