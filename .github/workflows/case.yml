@@ -53,3 +53,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: "case.stl"
+          draft: false
+          prerelease: false
+          fail_on_unmatched_files: true
