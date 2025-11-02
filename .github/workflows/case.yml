@@ -1,13 +1,20 @@
-name: Build Board Case
+name: Build Case
 
 on:
   workflow_dispatch:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - main
     paths:
       - "board/**"
-      - ".github/workflows/board.yml"
+      - ".github/workflows/case.yml"
+      - "package.json"
+    tags:
+      - "v*.*.*"
+  pull_request:
+    paths:
+      - "board/**"
+      - ".github/workflows/case.yml"
       - "package.json"
 jobs:
   build:
@@ -41,7 +48,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v5
         with:
-          name: board-case
+          name: case
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
