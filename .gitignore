@@ -5,6 +5,7 @@ target
 *.hex
 *.uf2
 node_modules
+bun.lock
 .DS_Store
 
 outlines/
