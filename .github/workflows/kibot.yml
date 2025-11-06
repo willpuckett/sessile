@@ -3,8 +3,6 @@ name: KiBot
 # Controls when the action will run.
 on:
   push:
-    tags:
-      - "v*.*.*"
     paths:
       - "board/output/pcbs/*.kicad_sch"
       - "board/output/pcbs/*.kicad_pcb"
@@ -16,8 +14,7 @@ on:
       - "board/output/pcbs/*.kicad_pcb"
       - "board/*.kibot.yaml"
       - ".github/workflows/kibot.yml"
-  repository_dispatch:
-    types: [run_gha]
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
