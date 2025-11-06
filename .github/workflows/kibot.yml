@@ -25,27 +25,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v3 
-        # with:
-        #   config: board/sessile.kibot.yaml
-        #   dir: board/output/pcbs
-        # #   variant: board
-        #   board: board/output/pcbs/sessile.kicad_pcb
-        #   schema: board/output/pcbs/sessile.kicad_sch
-        #   skip: erc
-        #   targets: ZIP_ASSEMBLY
       - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
-          wget https://set-soft.github.io/debian/kibot.sources
-          sudo cp kibot.sources /etc/apt/sources.list.d/
           sudo apt update
-          sudo apt install -y kibot
-
-          kibot \
+          sudo apt install -y kicad
+          touch board/output/pcbs/sessile.kicad_sch
+          echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
+          uv run kibot \
               -c board/sessile.kibot.yaml \
               -d board/output/pcbs \
               -b board/output/pcbs/sessile.kicad_pcb \
-              -s board/output/pcbs/sessile.kicad_sch \
-              --skip erc \
-              --targets ZIP_ASSEMBLY
+              -e board/output/pcbs/sessile.kicad_sch \
+              ZIP_ASSEMBLY
       - uses: actions/upload-artifact@v4
         with:
           name: pcb
