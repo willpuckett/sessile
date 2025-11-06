@@ -3,43 +3,34 @@ name: KiBot
 # Controls when the action will run.
 on:
   push:
+    tags:
+      - "v*.*.*"
     paths:
       - "board/output/pcbs/*.kicad_sch"
       - "board/output/pcbs/*.kicad_pcb"
       - "board/*.kibot.yaml"
       - ".github/workflows/kibot.yml"
-    tags:
-      - "v*.*.*"
   pull_request:
     paths:
       - "board/output/pcbs/*.kicad_sch"
       - "board/output/pcbs/*.kicad_pcb"
       - "board/*.kibot.yaml"
       - ".github/workflows/kibot.yml"
-  workflow_dispatch:
+  repository_dispatch:
+    types: [run_gha]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  KIBOT:
-    runs-on: ubuntu-slim
+  BOARD:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v3
-      - name: Install KiCad and dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y kicad kicad-libraries python3-dev
-      - name: Generate PCB files
-        run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
-          touch board/output/pcbs/sessile.kicad_sch
-          echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
-
-          PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH" uvx kibot \
-              -c board/sessile.kibot.yaml \
-              -d board/output/pcbs \
-              -b board/output/pcbs/sessile.kicad_pcb \
-              -e board/output/pcbs/sessile.kicad_sch \
-              ZIP_ASSEMBLY
+      - uses: INTI-CMNB/KiBot@v2_k9
+        with:
+          config: board/sessile.kibot.yaml
+          dir: board/output/pcbs
+          board: board/output/pcbs/sessile.kicad_pcb
+          targets: ZIP_ASSEMBLY
       - uses: actions/upload-artifact@v4
         with:
           name: pcb
@@ -50,7 +41,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: write
-    needs: KIBOT
+    needs: BOARD
     steps:
       - uses: actions/download-artifact@v4
         with:
