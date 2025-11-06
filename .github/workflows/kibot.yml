@@ -23,15 +23,16 @@ jobs:
   KIBOT:
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@v4
-      - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
+      - run: | 
           sudo apt update
           sudo apt install -y kicad
-          touch board/output/pcbs/sessile.kicad_sch
-          echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
+      - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v3 
       - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
-          uv run kibot \
+          touch board/output/pcbs/sessile.kicad_sch
+          echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
+
+          uvx kibot \
               -c board/sessile.kibot.yaml \
               -d board/output/pcbs \
               -b board/output/pcbs/sessile.kicad_pcb \
