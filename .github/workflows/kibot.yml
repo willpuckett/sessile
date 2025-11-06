@@ -29,15 +29,12 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y kicad kicad-libraries python3-dev
-          # Set up Python path for KiCad
-          echo "PYTHONPATH=/usr/lib/python3/dist-packages:$PYTHONPATH" >> $GITHUB_ENV
-          uv install kibot
       - name: Generate PCB files
         run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
           touch board/output/pcbs/sessile.kicad_sch
           echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
 
-          uv run kibot \
+          PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH" uvx kibot \
               -c board/sessile.kibot.yaml \
               -d board/output/pcbs \
               -b board/output/pcbs/sessile.kicad_pcb \
