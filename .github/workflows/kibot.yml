@@ -39,8 +39,8 @@ jobs:
           config: board/sessile.kibot.yaml
           dir: board/output/pcbs
         #   variant: board
-        #   board: board/output/pcbs/sessile.kicad_pcb
-        #   schema: board/output/pcbs/sessile.kicad_sch
+          board: board/output/pcbs/sessile.kicad_pcb
+          schema: board/output/pcbs/sessile.kicad_sch
           skip: erc
           targets: ZIP_ASSEMBLY
       
