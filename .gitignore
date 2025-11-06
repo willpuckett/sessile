@@ -13,6 +13,7 @@ cases/
 
 *.kicad_pcb.lck
 *-backups
+_autosave*
 fp-info-cache
 fp-lib-table
 *.kicad_prl

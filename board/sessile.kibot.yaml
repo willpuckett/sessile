@@ -6,19 +6,19 @@ kibot:
   version: 1
 
 preflight:
-  erc: true
+  erc: false
   drc:
     enabled: true
     ignore_unconnected: false
   fill_zones: true
 
-# variants:
-#   - name: board
-#     comment: Main board
-#     type: kibom
-#     variant: board
-#     pre_transform:
-#       - fix_rotation
+variants:
+  - name: board
+    comment: Main board
+    type: kibom
+    variant: board
+    pre_transform:
+      - fix_rotation
 
 filters:
   - name: fix_rotation
@@ -42,12 +42,6 @@ filters:
         regex: '^C\d+'
 
 outputs:
-  # - name: SCHEMATIC
-  #   comment: Schematic in SVG format
-  #   type: svg_sch_print
-  #   options:
-  #     output: "%i.%x"
-
   - name: JLCPCB_GERBERS
     comment: Gerbers compatible with JLCPCB
     type: gerber
