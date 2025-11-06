@@ -16,27 +16,28 @@ preflight:
     ignore_unconnected: false
   fill_zones: true
 
-variants:
-  - name: board
-    comment: Main board
-    type: kibom
-    variant: board
-    pre_transform:
-      - fix_rotation
+# variants:
+#   - name: board
+#     comment: Main board
+#     type: kibom
+#     variant: board
+#     pre_transform:
+#       - fix_rotation
 
 filters:
-  - name: fix_rotation
-    comment: Adjust rotation for JLC
-    type: rot_footprint
-    negative_bottom: false
-    invert_bottom: true
-    rotations:
-      - ["^SOIC-16*", 270.0]
-      - ["^SOT-23", 0.0]
-      - ["^SW_SPDT_PCM12", 180.0]
-      - ["^Panasonic_EVQPUL_.*", 90.0]
-      - ["^D_.*", 180.0]
-      - ["^R_.*", 180.0]
+  # - name: fix_rotation
+  #   comment: Adjust rotation for JLC
+  #   type: rot_footprint
+  #   negative_bottom: false
+  #   invert_bottom: true
+  #   rotations:
+  #     - ["^SOIC-16*", 270.0]
+  #     - ["^SOT-23", 0.0]
+  #     - ["^SOT-35", 180.0]
+  #     - ["^SW_SPDT_PCM12", 180.0]
+  #     - ["^Panasonic_EVQPUL_.*", 90.0]
+  #     - ["^D_.*", 180.0]
+  #     - ["^R_.*", 180.0]
 
   - name: only_jlc_parts
     comment: Only parts with JLC code
