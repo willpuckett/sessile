@@ -24,53 +24,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-        
-      - name: Cache Docker layers
-        uses: actions/cache@v4
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-kibot-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-kibot-
-            
-      - name: Cache KiBot Docker image
-        id: cache-kibot
-        uses: actions/cache@v4
-        with:
-          path: /tmp/kibot-image.tar
-          key: kibot-v2_dk9-${{ hashFiles('.github/workflows/kibot.yml') }}
-          
-      - name: Load cached Docker image
-        if: steps.cache-kibot.outputs.cache-hit == 'true'
-        run: |
-          docker load -i /tmp/kibot-image.tar || true
-          
-      - name: Pre-pull and save KiBot image
-        if: steps.cache-kibot.outputs.cache-hit != 'true'
-        run: |
-          docker pull ghcr.io/inti-cmnb/kibot:v2_dk9
-          docker save ghcr.io/inti-cmnb/kibot:v2_dk9 -o /tmp/kibot-image.tar
-      
-      - name: Create dummy schematic if needed
-        run: |
-          if [ ! -f "board/output/pcbs/sessile.kicad_sch" ]; then
-            touch board/output/pcbs/sessile.kicad_sch
-            echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
-          fi
-      
-      - uses: INTI-CMNB/KiBot@v2_dk9
-        with:
-          config: board/sessile.kibot.yaml
-          dir: board/output/pcbs
-        #   variant: board
-          board: board/output/pcbs/sessile.kicad_pcb
-          schema: board/output/pcbs/sessile.kicad_sch
-          skip: erc
-          targets: ZIP_ASSEMBLY
-      
+      - uses: astral-sh/setup-uv@v3 
+        # with:
+        #   config: board/sessile.kibot.yaml
+        #   dir: board/output/pcbs
+        # #   variant: board
+        #   board: board/output/pcbs/sessile.kicad_pcb
+        #   schema: board/output/pcbs/sessile.kicad_sch
+        #   skip: erc
+        #   targets: ZIP_ASSEMBLY
+      - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
+          wget https://set-soft.github.io/debian/kibot.sources
+          sudo cp kibot.sources /etc/apt/sources.list.d/
+          sudo apt update
+          sudo apt install -y kibot
+
+          kibot \
+              -c board/sessile.kibot.yaml \
+              -d board/output/pcbs \
+              -b board/output/pcbs/sessile.kicad_pcb \
+              -s board/output/pcbs/sessile.kicad_sch \
+              --skip erc \
+              --targets ZIP_ASSEMBLY
       - uses: actions/upload-artifact@v4
         with:
           name: pcb
