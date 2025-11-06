@@ -25,12 +25,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Create dummy schematic if needed
+        run: |
+          if [ ! -f "board/output/pcbs/sessile.kicad_sch" ]; then
+            touch board/output/pcbs/sessile.kicad_sch
+            echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
+          fi
       - uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: board/sessile.kibot.yaml
           dir: board/output/pcbs
           variant: board
           board: board/output/pcbs/sessile.kicad_pcb
+          schema: board/output/pcbs/sessile.kicad_sch
           skip: erc
           targets: __NONE__
 
@@ -39,12 +46,19 @@ jobs:
     needs: [DRC]
     steps:
       - uses: actions/checkout@v4
+      - name: Create dummy schematic if needed
+        run: |
+          if [ ! -f "board/output/pcbs/sessile.kicad_sch" ]; then
+            touch board/output/pcbs/sessile.kicad_sch
+            echo '(kicad_sch (version 20230121))' > board/output/pcbs/sessile.kicad_sch
+          fi
       - uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: board/sessile.kibot.yaml
           dir: board/output/pcbs
           variant: board
           board: board/output/pcbs/sessile.kicad_pcb
+          schema: board/output/pcbs/sessile.kicad_sch
           skip: erc,drc
           targets: ZIP_ASSEMBLY
       - uses: actions/upload-artifact@v4

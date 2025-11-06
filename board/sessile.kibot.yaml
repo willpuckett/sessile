@@ -5,6 +5,10 @@
 kibot:
   version: 1
 
+global:
+  pcb_material: "FR4"
+  solder_mask_color: "green"
+
 preflight:
   erc: false
   drc:
