@@ -24,8 +24,6 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
-          echo "set man-db/auto-update false" | sudo debconf-communicate
-          sudo dpkg-reconfigure man-db
           sudo apt update
           sudo apt install -y kicad
           touch board/output/pcbs/sessile.kicad_sch
