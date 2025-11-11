@@ -1,5 +1,10 @@
 # 🦀 RMK Firmware
 
+[![Latest Release](https://img.shields.io/github/v/release/willpuckett/sessile?style=for-the-badge&logo=github&label=Latest%20Release&color=green)](https://github.com/willpuckett/sessile/releases/latest)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/willpuckett/sessile/rmk.yml?style=for-the-badge&logo=rust&label=Build&color=orange)](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml)
+[![Rust](https://img.shields.io/badge/rust-stable-red?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
+[![Target](https://img.shields.io/badge/target-thumbv7em--none--eabihf-blue?style=for-the-badge&logo=arm)](https://doc.rust-lang.org/rustc/platform-support/thumbv7em-none-eabi.html)
+
 ## 🚀 Building
 
 Automated builds of RMK are available in

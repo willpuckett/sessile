@@ -2,9 +2,11 @@
 
 ![sessile render](.images/render.webp)
 
-[![Build RMK firmware](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml)
-[![Build Case](https://github.com/willpuckett/sessile/actions/workflows/case.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/case.yml)
-[![keymap](https://github.com/willpuckett/sessile/actions/workflows/keymap.yml/badge.svg)](https://github.com/willpuckett/sessile/actions/workflows/keymap.yml)
+[![Build RMK firmware](https://img.shields.io/github/actions/workflow/status/willpuckett/sessile/rmk.yml?style=for-the-badge&logo=rust&label=RMK%20Firmware&color=orange)](https://github.com/willpuckett/sessile/actions/workflows/rmk.yml)
+[![Build Case](https://img.shields.io/github/actions/workflow/status/willpuckett/sessile/case.yml?style=for-the-badge&logo=3d-printer&label=Case&color=purple)](https://github.com/willpuckett/sessile/actions/workflows/case.yml)
+[![Keymap](https://img.shields.io/github/actions/workflow/status/willpuckett/sessile/keymap.yml?style=for-the-badge&logo=keyboard&label=Keymap&color=blue)](https://github.com/willpuckett/sessile/actions/workflows/keymap.yml)
+[![Latest Release](https://img.shields.io/github/v/release/willpuckett/sessile?style=for-the-badge&logo=github&label=Release&color=green)](https://github.com/willpuckett/sessile/releases/latest)
+[![License](https://img.shields.io/badge/License-Solderpad%20Hardware%20v2.1-blue?style=for-the-badge&logo=open-source-hardware)](LICENSE)
 
 _Sessile_ is a further exploration of "minimal" finger travel.
 
@@ -45,17 +47,21 @@ avoiding lateral reaches seemed like a start. 🙃
 - 🔌 The high speed pins were left available for encoders and _could_ be wired
   in a subsequent revision.
 
-- 🐣 Designed to sit as low as possible. Use a stroke of gluestick under the
-  case to keep in place.
-
 - ⚙️ Built for RMK. Configure using [Vial](https://get.vial.today).
+
+## 🏠 Case
+
+A 3D printable case is available in the [latest release](https://github.com/willpuckett/sessile/releases/latest)! The case is designed to sit as low as possible and can be secured with a stroke of glue stick underneath. Case is generated via ergogen with jscad v2 api. [Try it out](https://github.com/ergogen/ergogen/pull/159) it's testing 10-20x faster than @jscad/cli@1.
+
+[![Download Case](https://img.shields.io/badge/Download-3D%20Case-brightgreen?style=for-the-badge&logo=download&logoColor=white)](https://github.com/willpuckett/sessile/releases/latest)
 
 ## 📦 Production Files
 
-You can find the gerbers, bom, and cpl for JLC
-[here](board/output/pcbs/jlcpcb/production_files/). Finished boards are
-~~available~~ [sold out](https://octule.com/listing/1842172090/sessile) till the
-next batch.
+Ready to manufacture your own board? All production files are included in the repository:
+
+[![Download Production Files](https://img.shields.io/badge/Download-Production%20Files-orange?style=for-the-badge&logo=file-text&logoColor=white)](board/output/pcbs/jlcpcb/production_files/)
+
+Includes gerbers, BOM, and CPL files for JLC. Finished boards are ~~available~~ [sold out](https://octule.com/listing/1842172090/sessile) till the next batch.
 
 ## 🎨 Origin
 
