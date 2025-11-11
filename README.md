@@ -51,17 +51,24 @@ avoiding lateral reaches seemed like a start. 🙃
 
 ## 🏠 Case
 
-A 3D printable case is available in the [latest release](https://github.com/willpuckett/sessile/releases/latest)! The case is designed to sit as low as possible and can be secured with a stroke of glue stick underneath. Case is generated via ergogen with jscad v2 api. [Try it out](https://github.com/ergogen/ergogen/pull/159) it's testing 10-20x faster than @jscad/cli@1.
+A 3D printable case is available in the
+[latest release](https://github.com/willpuckett/sessile/releases/latest)! The
+case is designed to sit as low as possible and can be secured with a stroke of
+glue stick underneath. Case is generated via ergogen with jscad v2 api.
+[Try it out](https://github.com/ergogen/ergogen/pull/159) it's testing 10-20x
+faster than @jscad/cli@1.
 
 [![Download Case](https://img.shields.io/badge/Download-3D%20Case-brightgreen?style=for-the-badge&logo=download&logoColor=white)](https://github.com/willpuckett/sessile/releases/latest)
 
 ## 📦 Production Files
 
-Ready to manufacture your own board? All production files are included in the repository:
+Ready to manufacture your own board? All production files are included in the
+repository:
 
 [![Download Production Files](https://img.shields.io/badge/Download-Production%20Files-orange?style=for-the-badge&logo=file-text&logoColor=white)](board/output/pcbs/jlcpcb/production_files/)
 
-Includes gerbers, BOM, and CPL files for JLC. Finished boards are ~~available~~ [sold out](https://octule.com/listing/1842172090/sessile) till the next batch.
+Includes gerbers, BOM, and CPL files for JLC. Finished boards are ~~available~~
+[sold out](https://octule.com/listing/1842172090/sessile) till the next batch.
 
 ## 🎨 Origin
 
