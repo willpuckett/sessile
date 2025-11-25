@@ -41,3 +41,6 @@ dependencies = ["objcopy"]
 # command = "rm"
 # args = ["sessile.hex"]
 # dependencies = ["hex-to-uf2"]
+
+[tasks.default]
+alias = "uf2"
