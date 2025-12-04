@@ -43,7 +43,7 @@ jobs:
           path: board/output/pcbs/jlcpcb.zip
 
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: write

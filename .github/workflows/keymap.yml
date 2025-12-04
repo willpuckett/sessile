@@ -26,10 +26,9 @@ jobs:
           ref: ${{ github.head_ref }}
       - uses: astral-sh/setup-uv@v3
       - run: | # use https://nickcoutsos.github.io/keymap-layout-tools/ to generate info.json 
-            uvx --from git+https://github.com/willpuckett/keymap-drawer keymap \
-                -c .images/config.yml parse -r rmk/keyboard.toml | \
-            uvx --from git+https://github.com/willpuckett/keymap-drawer keymap \
-                draw -j .images/info.json - > .images/keymap.svg 
+            prurl=git+https://github.com/caksoylar/keymap-drawer@pull/187/head
+            uvx --from $prurl keymap -c .images/config.yml parse -r rmk/keyboard.toml | \
+            uvx --from $prurl keymap draw -j .images/info.json - > .images/keymap.svg 
       - uses: actions/upload-artifact@v4
         with:
           name: keymaps
@@ -37,7 +36,7 @@ jobs:
           include-hidden-files: true
 
   push-or-release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: draw-keymaps
     permissions:
       contents: write # allow workflow to commit to the repository and create releases

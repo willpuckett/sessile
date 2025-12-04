@@ -71,25 +71,12 @@ draw_config:
   glyph_hold_size: 8
   glyph_shifted_size: 8
   
-parse_config:
-  zmk_remove_keycode_prefix: ["DE_"]  
-    
+parse_config: 
   sticky_label: $$mdi:circle-small$$
   toggle_label: $$mdi:toggle-switch$$
   trans_legend:
     tap: $$mdi:chevron-down$$
     type: trans
-
-# parse_config:
-#   rmk_combos:
-#     "$":  # For a combo that outputs a dollar sign
-#       draw_separate: true
-#     "Escape":  # For a combo that outputs Escape
-#       draw_separate: true
-#     "Tab":  # For a combo that outputs Tab
-#       draw_separate: true
-#       align: "top"
-#       offset: 0.5
 
   # RMK combo configuration for better visual separation
   rmk_combos:
@@ -104,7 +91,6 @@ parse_config:
     "CapsLock":
       draw_separate: true
     "OSL(3)":
-      p: [9, 10, 11, 12, 13, 14]
       draw_separate: true
       key: $$mdi:arrow-u-down-left$$
     "OSM(LShift)":
@@ -122,7 +108,6 @@ parse_config:
     "Z":
       draw_separate: false
       align: "bottom"
-      # offset: 0.4
     # Brackets and symbols - separate for clarity
     "LeftBracket":
       draw_separate: false
@@ -151,290 +136,160 @@ parse_config:
       draw_separate: true
       key: ">"
 
-  
-  raw_binding_map: 
-    '&mgs SPACE': $$mdi:keyboard-space$$
-    '&sys_reset': $$mdi:backup-restore$$
-    '&bootloader': $$mdi:progress-download$$
-    '&studio_unlock': $$mdi:lock-open-outline$$
-    '&soft_off': $$mdi:power$$
-    '&hml LA(LCTRL) TAB': $$mdi:keyboard-tab$$
-    '&hml_repeat LS(LCTRL) 0': $$mdi:repeat$$
-    '&key_repeat': $$mdi:repeat$$
-    '&caps_word': $$mdi:caps-lock$$
-    '&num_word 1': $$mdi:counter$$
-    '&mt LA(F4) LG(W)': $$mdi:close-box-outline$$
-    '&alt_tabber': $$mdi:swap-horizontal$$
-    '&kns_lock': $$mdi:apple-keyboard-caps$$
-    '&dgrv_macro': '``'
-    '&brc_macro': '[]'
-    '&par_macro': '()'
-    '&bkt_macro': '{}'
-    '&lgt_macro': '<>'
-
-    '&mt LS(LG(V)) LG(V)': $$mdi:content-paste$$
-    
-    '&out OUT_BLE': $$mdi:bluetooth$$
-    '&out OUT_USB': $$mdi:usb$$
-    '&out OUT_TOG':
-      tap: $$mdi:toggle-switch$$
-      hold: $$mdi:bluetooth$$
-      shifted: $$mdi:usb$$
-      type: toggle
-    
-    '&bt BT_CLR':
-      tap: $$mdi:bluetooth$$
-      shifted: $$mdi:close-thick$$
-      type: text_with_symbol
-    '&bts_0':
-      tap: $$mdi:bluetooth-connect$$
-      shifted: '0'
-      type: text_with_symbol
-    '&bts_1':
-      tap: $$mdi:bluetooth-connect$$
-      shifted: '1'
-      type: text_with_symbol
-    '&bts_2':
-      tap: $$mdi:bluetooth-connect$$
-      shifted: '2'
-      type: text_with_symbol
-    '&bts_3':
-      tap: $$mdi:bluetooth-connect$$
-      shifted: '3'
-      type: text_with_symbol
-    '&bts_4':
-      tap: $$mdi:bluetooth-connect$$
-      shifted: '4'
-      type: text_with_symbol
-
-  zmk_keycode_map:
-
+  rmk_keycode_map:
+     # Special/empty keys
+    "No": ""
+    "__": ""
+    # Punctuation keys (actual RMK KeyCode names
+    "Minus": "-"
+    "Equal": "="
+    "LeftBracket": "["
+    "RightBracket": "]"
+    "Backslash": "\\"
+    "NonusHash": "#"
+    "Semicolon": ";"
+    "Quote": "'"
+    "Grave": "`"
+    "Comma": ","
+    "Dot": "."
+    "Slash": "/"
+    "NonusBackslash": "\\"
+    # Shifted symbols (using RMK's SHIFTED(key) syntax
+    "SHIFTED(Grave)": "~"
+    "SHIFTED(`)": "~"
+    "SHIFTED(Kc1)": "!"
+    "SHIFTED(1)": "!"
+    "SHIFTED(Kc2)": "@"
+    "SHIFTED(2)": "@"
+    "SHIFTED(Kc3)": "#"
+    "SHIFTED(3)": "#"
+    "SHIFTED(Kc4)": "$"
+    "SHIFTED(4)": "$"
+    "SHIFTED(Kc5)": "%"
+    "SHIFTED(5)": "%"
+    "SHIFTED(Kc6)": "^"
+    "SHIFTED(6)": "^"
+    "SHIFTED(Kc7)": "&"
+    "SHIFTED(7)": "&"
+    "SHIFTED(Kc8)": "*"
+    "SHIFTED(8)": "*"
+    "SHIFTED(Kc9)": "("
+    "SHIFTED(9)": "("
+    "SHIFTED(Kc0)": ")"
+    "SHIFTED(0)": ")"
+    "SHIFTED(Minus)": "_"
+    "SHIFTED(-)": "_"
+    "SHIFTED(Equal)": "+"
+    "SHIFTED(=)": "+"
+    "SHIFTED(LeftBracket)": "{"
+    "SHIFTED([)": "{"
+    "SHIFTED(RightBracket)": "}"
+    "SHIFTED(])": "}"
+    "SHIFTED(Backslash)": "|"
+    "SHIFTED(\\)": "|"
+    "SHIFTED(Semicolon)": ":"
+    "SHIFTED(;)": ":"
+    "SHIFTED(Quote)": '"'
+    "SHIFTED(')": '"'
+    "SHIFTED(Comma)": "<"
+    "SHIFTED(,)": "<"
+    "SHIFTED(Dot)": ">"
+    "SHIFTED(.)": ">"
+    "SHIFTED(Slash)": "?"
+    "SHIFTED(/)": "?"
     'Bootloader': $$mdi:progress-download$$
-    # Clean up the Kc mappings to proper numbers and symbols
-    Kc1: "1"
-    Kc2: "2" 
-    Kc3: "3"
-    Kc4: "4"
-    Kc5: "5"
-    Kc6: "6"
-    Kc7: "7"
-    Kc8: "8"
-    Kc9: "9"
-    Kc0: "0"
-    
-    # More expressive function key labels
-    F1: "F1"
-    F2: "F2" 
-    F3: "F3"
-    F4: "F4"
-    F5: "F5"
-    F6: "F6"
-    F7: "F7"
-    F8: "F8"
-    F9: "F9"
-    F10: "F10"
-    F11: "F11"
-    F12: "F12"
-    
-    # Enhanced system shortcuts with better icons
-    LG(BSPC): $$mdi:backspace$$
-    LG(DEL): $$mdi:backspace-reverse$$
-    LS(TAB): $$mdi:keyboard-tab-reverse$$
-    
-    LG(TAB): $$mdi:window-open$$
-    LG(LS(TAB)): $$mdi:window-minimize$$
-
-    LG(LG(LEFT)): $$mdi:monitor-arrow-left$$
-    LG(LG(RIGHT)): $$mdi:monitor-arrow-right$$
-    
-    LG(LS(LALT)): $$mdi:star-three-points$$
-    LG(LS(LA(LGUI))): $$mdi:star-four-points$$
-    LG(HOME): $$mdi:format-vertical-align-top$$
-    LG(END): $$mdi:format-vertical-align-bottom$$
-
-    # Copy/paste with clearer icons
-    LG(INS): $$mdi:content-copy$$
-    LG(C): $$mdi:content-copy$$
-    LS(INS): $$mdi:content-paste$$
-    LG(V): $$mdi:content-paste$$
-    LS(DEL): $$mdi:content-cut$$
-    LG(X): $$mdi:content-cut$$
-    LG(Z): $$mdi:undo-variant$$
-    ⌘Z: $$mdi:undo-variant$$
-    LG(DE_Y): $$mdi:redo-variant$$
-    LG(LS(DE_Z)): $$mdi:redo-variant$$
-
-    LG(A): $$mdi:select-all$$
-    LG(F): $$mdi:magnify$$
-    LG(W): $$mdi:close-box$$
-    LA(F4)': $$mdi:close-box$$
-
-    LG(DE_PLUS)': $$mdi:magnify-plus$$
-    LG(DE_MINUS)': $$mdi:magnify-minus$$
-    LG(N0)': $$mdi:fit-to-screen$$
-
-    LG(L)': $$mdi:lock$$
     
     # More expressive basic keys
-    SPACE: $$mdi:keyboard-space$$
     Space: $$mdi:keyboard-space$$
-    ESC: $$mdi:keyboard-esc$$
-    Esc: $$mdi:keyboard-esc$$
     Escape: $$mdi:keyboard-esc$$
-    RETURN: $$mdi:keyboard-return$$
-    RET: $$mdi:keyboard-return$$
-    BACKSPACE: $$mdi:backspace$$
-    BSPC: $$mdi:backspace$$
-    DELETE: $$mdi:backspace-reverse$$
-    DEL: $$mdi:backspace-reverse$$
+    Enter: $$mdi:keyboard-return$$
+    Backspace: $$mdi:backspace$$
     
     # Enhanced modifier keys with clearer styling
-    LCTRL: 
-      tap: $$mdi:apple-keyboard-control$$
-      type: modifier
     LCtrl: 
-      tap: $$mdi:apple-keyboard-control$$
-      type: modifier
-    LEFT_CONTROL: 
-      tap: $$mdi:apple-keyboard-control$$
-      type: modifier
-    RCTRL: 
       tap: $$mdi:apple-keyboard-control$$
       type: modifier
     RCtrl: 
       tap: $$mdi:apple-keyboard-control$$
       type: modifier
-    RIGHT_CONTROL: 
-      tap: $$mdi:apple-keyboard-control$$
-      type: modifier
     
-    LALT: 
-      tap: $$mdi:apple-keyboard-option$$
-      type: modifier
     LAlt: 
-      tap: $$mdi:apple-keyboard-option$$
-      type: modifier
-    LEFT_ALT: 
-      tap: $$mdi:apple-keyboard-option$$
-      type: modifier
-    RALT: 
       tap: $$mdi:apple-keyboard-option$$
       type: modifier
     RAlt: 
       tap: $$mdi:apple-keyboard-option$$
       type: modifier
-    RIGHT_ALT: 
-      tap: $$mdi:apple-keyboard-option$$
-      type: modifier
     
-    LSHFT: 
-      tap: $$mdi:apple-keyboard-shift$$
-      type: modifier
     LShift: 
-      tap: $$mdi:apple-keyboard-shift$$
-      type: modifier
-    LEFT_SHIFT: 
-      tap: $$mdi:apple-keyboard-shift$$
-      type: modifier
-    RSHFT: 
       tap: $$mdi:apple-keyboard-shift$$
       type: modifier
     RShift: 
       tap: $$mdi:apple-keyboard-shift$$
       type: modifier
-    RIGHT_SHIFT: 
-      tap: $$mdi:apple-keyboard-shift$$
-      type: modifier
 
-    LGUI: 
-      tap: $$mdi:apple-keyboard-command$$
-      type: modifier
     LGui: 
-      tap: $$mdi:apple-keyboard-command$$
-      type: modifier
-    RGUI: 
       tap: $$mdi:apple-keyboard-command$$
       type: modifier
     RGui: 
       tap: $$mdi:apple-keyboard-command$$
       type: modifier
     
-    TAB: 
+    Tab: 
       tap: $$mdi:keyboard-tab$$
       type: nav
-    Tab: $$mdi:keyboard-tab$$
 
     # Enhanced lock keys
-    CLCK: $$mdi:apple-keyboard-caps$$
-    CAPS: $$mdi:apple-keyboard-caps$$
+    Caps: $$mdi:apple-keyboard-caps$$
     CapsLock: $$mdi:apple-keyboard-caps$$
     CapsWordToggle: $$mdi:caps-lock$$
-    SCROLLLOCK: $$mdi:lock$$
-    SLCK: $$mdi:lock$$
-    SCLK: $$mdi:lock$$
-    KP_LCK: $$mdi:numeric$$
 
-    PSCRN: $$mdi:camera$$
-    PAUSE_BREAK: $$mdi:pause$$
-    
     # Enhanced media keys with better icons
-    C_PP: $$mdi:play-pause$$
     MediaPlayPause: $$mdi:play-pause$$
-    C_NEXT: $$mdi:skip-next$$
     MediaNextTrack: $$mdi:skip-next$$
-    C_PREV: $$mdi:skip-previous$$
     MediaPrevTrack: $$mdi:skip-previous$$
     MediaEject: $$mdi:eject$$
-    MUTE: $$mdi:volume-off$$
-    VOL_UP: $$mdi:volume-high$$
-    VOL_DN: $$mdi:volume-low$$
+    KbMute: $$mdi:volume-off$$
+    KbVolumeUp: $$mdi:volume-high$$
+    KbVolumeDown: $$mdi:volume-low$$
     
-    # Brightness with sun icons
-    C_BRI_UP: $$mdi:brightness-7$$
-    C_BRI_DN: $$mdi:brightness-4$$
-    
-    C_POWER: $$mdi:power$$
-    C_SLEEP: $$mdi:sleep$$
-    C_AL_CALC: $$mdi:calculator$$
-
     # Enhanced keypad with better styling
-    KP_1: 
+    Kp1: 
       tap: "1"
       type: keypad
-    KP_2: 
+    Kp2: 
       tap: "2"
       type: keypad
-    KP_3: 
+    Kp3: 
       tap: "3"
       type: keypad
-    KP_4: 
+    Kp4: 
       tap: "4"
       type: keypad
-    KP_5: 
+    Kp5: 
       tap: "5"
       type: keypad
-    KP_6: 
+    Kp6: 
       tap: "6"
       type: keypad
-    KP_7: 
+    Kp7: 
       tap: "7"
       type: keypad
-    KP_8: 
+    Kp8: 
       tap: "8"
       type: keypad
-    KP_9: 
+    Kp9: 
       tap: "9"
       type: keypad
-    KP_0: 
+    Kp0: 
       tap: "0"
       type: keypad
-    KP_ENTER: $$mdi:keyboard-return$$
-    KP_PLUS: "+"
-    KP_MINUS: "−"
-    KP_MULTIPLY: "×"
-    KP_DIVIDE: "÷"
+    KpEnter: $$mdi:keyboard-return$$
+    KpPlus: "+"
+    KpMinus: "−"
+    KpMUultiply: "×"
+    KpDivide: "÷"
+    KpDot: "."
     
-    UP: $$mdi:arrow-up$$
     Up: $$mdi:arrow-up$$
     Down: $$mdi:arrow-down$$
     Left: $$mdi:arrow-left$$
@@ -443,89 +298,3 @@ parse_config:
     End: $$mdi:movie-open-off$$   
     PageUp: $$mdi:arrow-up-thick$$
     PageDown: $$mdi:arrow-down-thick$$
-
-    SECT: '§'
-    DEG: '°'
-    EURO: '€'
-
-    A_UMLAUT: 'Ä'
-    AE: 'Ä'
-    U_UMLAUT: 'Ü'
-    UE: 'Ü'
-    O_UMLAUT: 'Ö'
-    OE: 'Ö'
-    SZ: 'ß'
-    ACUTE: '´'
-    
-    # default
-    EXCLAMATION: '!'
-    EXCL: '!'
-    AT_SIGN: '@'
-    AT: '@'
-    HASH: '#'
-    POUND: '#'
-    DOLLAR: $
-    DLLR: $
-    PERCENT: '%'
-    PRCNT: '%'
-    CARET: ^
-    AMPERSAND: '&'
-    AMPS: '&'
-    ASTERISK: '*'
-    ASTRK: '*'
-    STAR: '*'
-    S(9): (
-    LEFT_PARENTHESIS: (
-    LPAR: (
-    RIGHT_PARENTHESIS: )
-    RPAR: )
-    EQUAL: '='
-    PLUS: +
-    MINUS: '-'
-    UNDERSCORE: _
-    UNDER: _
-    SLASH: /
-    FSLH: /
-    QUESTION: '?'
-    QMARK: '?'
-    BACKSLASH: \
-    BSLH: \
-    PIPE: '|'
-    NON_US_BACKSLASH: \
-    PIPE2: '|'
-    NON_US_BSLH: '|'
-    SEMICOLON: ;
-    SEMI: ;
-    COLON: ':'
-    SINGLE_QUOTE: ''''
-    SQT: ''''
-    APOSTROPHE: ''''
-    APOS: ''''
-    DOUBLE_QUOTES: '"'
-    DQT: '"'
-    COMMA: ','
-    LESS_THAN: <
-    LT: <
-    PERIOD: .
-    DOT: .
-    KP_DOT: .
-    GREATER_THAN: '>'
-    GT: '>'
-    LEFT_BRACKET: '['
-    LeftBracket: '['
-    LBKT: '['
-    LEFT_BRACE: '{'
-    Shifted(LeftBracket): '{'
-    LBRC: '{'
-    RIGHT_BRACKET: ']'
-    RightBracket: ']'
-    RBKT: ']'
-    RIGHT_BRACE: '}'
-    RBRC: '}'
-    GRAVE: '`'
-    Grave: '`'
-    TILDE: '~'
-    NON_US_HASH: '#'
-    NUHS: '#'
-    TILDE2: '~'
-    
