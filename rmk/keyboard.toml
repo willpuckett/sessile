@@ -123,8 +123,8 @@ combos = [
         "MT(S, LAlt)",
     ], output = "Tab", layer = 0 },
     { actions = [
-        "MT(A, RGui)",
-        "MT(N, RShift)",
+        "MT(T, LGui)",
+        "MT(R, LShift)",
     ], output = "-" },
     { actions = [
         "W",
@@ -137,7 +137,7 @@ combos = [
     { actions = [
         "Quote",
         "K",
-    ], output = "SHIFTED(/)" },
+    ], output = "SHIFTED(/)", layer = 0 },
     { actions = [
         "MT(N, RShift)",
         "MT(A, RGui)"
