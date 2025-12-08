@@ -123,13 +123,25 @@ combos = [
         "MT(S, LAlt)",
     ], output = "Tab", layer = 0 },
     { actions = [
+        "MT(A, RGui)",
+        "MT(N, RShift)",
+    ], output = "-" },
+    { actions = [
         "W",
         "M",
-    ], output = "-" },
+    ], output = "SHIFTED(-)" },
     { actions = [
         "Dot",
         "Comma",
     ], output = "/" },
+    { actions = [
+        "Quote",
+        "K",
+    ], output = "SHIFTED(/)" },
+    { actions = [
+        "MT(N, RShift)",
+        "MT(A, RGui)"
+    ], output = "SHIFTED(;)", layer = 0 },
     { actions = [
         "MT(H, LCtrl)",
         "MT(I, RAlt)",

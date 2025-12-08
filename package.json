@@ -1,6 +1,6 @@
 {
   "name": "sessile",
-  "version": "0.2.2",
+  "version": "0.3.3",
   "description": "minimal finger movement",
   "main": "index.js",
   "scripts": {

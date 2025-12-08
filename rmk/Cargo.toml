@@ -1,6 +1,6 @@
 [package]
 name = "sessile"
-version = "0.3.1"
+version = "0.3.3"
 authors = ["Will Puckett <willpuckett@gmail.com>"]
 description = "Keyboard firmware written in Rust"
 homepage = "https://github.com/willpuckett/sessile"
@@ -81,4 +81,3 @@ debug = true            # no overhead for bare-metal
 opt-level = "z"         # optimize for binary size
 overflow-checks = false
 lto = "fat"
-
