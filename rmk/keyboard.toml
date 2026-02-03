@@ -143,6 +143,10 @@ combos = [
         "MT(A, RGui)"
     ], output = "SHIFTED(;)", layer = 0 },
     { actions = [
+        "MT(A, RGui)",
+        "MT(I, RAlt)",
+    ], output = "SHIFTED(Quote)", layer = 0 },
+    { actions = [
         "MT(H, LCtrl)",
         "MT(I, RAlt)",
     ], output = ";", layer = 0 },
